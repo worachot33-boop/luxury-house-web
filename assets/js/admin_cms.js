@@ -28,13 +28,27 @@
 
   function updateHeaderAdminButton() {
     var btn = document.getElementById('openAdminCmsBtn');
-    if (!btn) return;
-    if (window.ApiClient.isAdminUnlocked()) {
-      btn.textContent = '✦ จัดการหลังบ้าน (ปลดล็อกแล้ว)';
-      btn.className = 'btn btn-dark btn-sm';
-    } else {
-      btn.textContent = 'สำหรับฝ่ายขาย';
-      btn.className = 'btn btn-outline btn-sm';
+    var mobileBtn = document.getElementById('mobileAdminCmsBtn');
+    var isUnlocked = window.ApiClient && typeof window.ApiClient.isAdminUnlocked === 'function' && window.ApiClient.isAdminUnlocked();
+
+    if (btn) {
+      if (isUnlocked) {
+        btn.textContent = '✦ จัดการหลังบ้าน (ปลดล็อกแล้ว)';
+        btn.className = 'btn btn-dark btn-sm desktop-admin-btn';
+      } else {
+        btn.textContent = 'สำหรับฝ่ายขาย';
+        btn.className = 'btn btn-outline btn-sm desktop-admin-btn';
+      }
+    }
+
+    if (mobileBtn) {
+      if (isUnlocked) {
+        mobileBtn.textContent = '✦ จัดการหลังบ้าน (ปลดล็อกแล้ว)';
+        mobileBtn.className = 'btn btn-dark btn-sm mobile-admin-link';
+      } else {
+        mobileBtn.textContent = 'สำหรับฝ่ายขาย / เข้าสู่ระบบ';
+        mobileBtn.className = 'btn btn-outline btn-sm mobile-admin-link';
+      }
     }
   }
 

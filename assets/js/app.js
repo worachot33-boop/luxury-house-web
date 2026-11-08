@@ -147,7 +147,7 @@
         var isOpen = nav.classList.toggle('open');
         menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       });
-      nav.querySelectorAll('a').forEach(function (link) {
+      nav.querySelectorAll('a, button').forEach(function (link) {
         link.addEventListener('click', function () {
           nav.classList.remove('open');
           menuBtn.setAttribute('aria-expanded', 'false');
@@ -155,15 +155,22 @@
       });
     }
 
+    function openAdminDashboard() {
+      if (window.AdminCms && typeof window.AdminCms.openDashboard === 'function') {
+        window.AdminCms.openDashboard();
+      } else {
+        window.alert('ระบบจัดการหลังบ้าน (Admin CMS) กำลังโหลด กรุณารอสักครู่ครับ');
+      }
+    }
+
     var adminBtn = document.getElementById('openAdminCmsBtn');
     if (adminBtn) {
-      adminBtn.addEventListener('click', function () {
-        if (window.AdminCms && typeof window.AdminCms.openDashboard === 'function') {
-          window.AdminCms.openDashboard();
-        } else {
-          window.alert('ระบบจัดการหลังบ้าน (Admin CMS) จะเปิดใช้งานเต็มรูปแบบใน Step 4 ครับ');
-        }
-      });
+      adminBtn.addEventListener('click', openAdminDashboard);
+    }
+
+    var mobileAdminBtn = document.getElementById('mobileAdminCmsBtn');
+    if (mobileAdminBtn) {
+      mobileAdminBtn.addEventListener('click', openAdminDashboard);
     }
   }
 

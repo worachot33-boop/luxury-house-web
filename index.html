@@ -10,7 +10,7 @@
   <meta property="og:description" content="บ้านเดี่ยวหรูแต่งบิ้วอินครบระดับโรงแรม 5 ดาว มูลค่างานบิ้วอินสูงสุด 3.8 ล้านบาท พร้อมเข้าอยู่ทันที นัดหมายชมโครงการแบบส่วนตัวได้ทุกวัน">
   <meta property="og:image" content="assets/images/villa_celeste_hero.jpg">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261108_step4_final">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261108_mobile_v1">
   <script id="dynamicJsonLd" type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,13 +51,17 @@
         <a href="#calculatorSection">คำนวณสินเชื่อ</a>
         <a href="#locationSection">ทำเลศักยภาพ</a>
         <a href="#bookingSection">นัดชมโครงการ</a>
+        <div class="mobile-nav-admin-divider" aria-hidden="true"></div>
+        <button type="button" id="mobileAdminCmsBtn" class="btn btn-outline btn-sm mobile-admin-link">
+          สำหรับฝ่ายขาย
+        </button>
       </nav>
 
       <div class="header-actions">
-        <button type="button" id="openAdminCmsBtn" class="btn btn-outline btn-sm" title="สำหรับเจ้าหน้าที่ฝ่ายขาย">
+        <button type="button" id="openAdminCmsBtn" class="btn btn-outline btn-sm desktop-admin-btn" title="สำหรับเจ้าหน้าที่ฝ่ายขาย">
           สำหรับฝ่ายขาย
         </button>
-        <a href="#bookingSection" class="btn btn-gold btn-sm">นัดชมแบบ VIP</a>
+        <a href="#bookingSection" class="btn btn-gold btn-sm header-vip-btn">นัดชม VIP</a>
         <button type="button" id="mobileMenuBtn" class="mobile-menu-btn" aria-label="เปิดเมนู" aria-expanded="false">☰</button>
       </div>
     </div>
@@ -523,13 +527,13 @@
   </div>
 
   <!-- Offline-Compatible Script Wiring (Global Namespace, Cache Busted) -->
-  <script src="assets/js/initial_data.js?v=20261108_step4_final"></script>
-  <script src="assets/js/api_client.js?v=20261108_step4_final"></script>
-  <script src="assets/js/property_catalog.js?v=20261108_step4_final"></script>
-  <script src="assets/js/mortgage_calculator.js?v=20261108_step4_final"></script>
-  <script src="assets/js/lead_manager.js?v=20261108_step4_final"></script>
-  <script src="assets/js/admin_cms.js?v=20261108_step4_final"></script>
-  <script src="assets/js/app.js?v=20261108_step4_final"></script>
+  <script src="assets/js/initial_data.js?v=20261108_mobile_v1"></script>
+  <script src="assets/js/api_client.js?v=20261108_mobile_v1"></script>
+  <script src="assets/js/property_catalog.js?v=20261108_mobile_v1"></script>
+  <script src="assets/js/mortgage_calculator.js?v=20261108_mobile_v1"></script>
+  <script src="assets/js/lead_manager.js?v=20261108_mobile_v1"></script>
+  <script src="assets/js/admin_cms.js?v=20261108_mobile_v1"></script>
+  <script src="assets/js/app.js?v=20261108_mobile_v1"></script>
 </body>
 </html>
 
