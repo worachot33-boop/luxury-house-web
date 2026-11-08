@@ -1,0 +1,12 @@
+{
+  "name": "luxury-house-web-r1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-Stack Luxury Built-in Residence Sales Web Application (8-20M THB) - Warm Luxury Edition",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "seed": "node --no-warnings db/seed.js"
+  }
+}
+
