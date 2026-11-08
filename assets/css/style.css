@@ -1404,6 +1404,19 @@ a.btn-dark:hover {
   line-height: 1.5;
 }
 
+#calcToBookingBtn {
+  width: 100%;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-height: 1.38;
+  padding: 13px 18px;
+  text-align: center;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
 /* Location & Lifestyle Section */
 .location-section {
   padding: 80px 0;
@@ -2339,6 +2352,36 @@ a.btn-dark:hover {
     word-break: break-word !important;
   }
 
+  #calcToBookingBtn {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    font-size: clamp(0.82rem, 3.6vw, 0.92rem) !important;
+    line-height: 1.38 !important;
+    padding: 12px 14px !important;
+    border-radius: var(--radius-md) !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+
+  #leadSubmitBtn {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    font-size: clamp(0.86rem, 3.8vw, 0.98rem) !important;
+    line-height: 1.38 !important;
+    padding: 13px 16px !important;
+    border-radius: var(--radius-md) !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+
   .modal-backdrop {
     padding: 10px;
   }
@@ -2400,6 +2443,17 @@ a.btn-dark:hover {
     font-size: 0.74rem !important;
     padding: 5px 8px !important;
   }
+
+  #calcToBookingBtn {
+    font-size: 0.84rem !important;
+    padding: 11px 12px !important;
+    line-height: 1.35 !important;
+  }
+
+  #leadSubmitBtn {
+    font-size: 0.88rem !important;
+    padding: 12px 14px !important;
+  }
 }
 
 @media (max-width: 400px) {
@@ -2431,6 +2485,17 @@ a.btn-dark:hover {
   .calc-controls-card,
   .calc-summary-card {
     padding: 14px 12px !important;
+  }
+
+  #calcToBookingBtn {
+    font-size: 0.80rem !important;
+    padding: 10px 10px !important;
+    line-height: 1.32 !important;
+  }
+
+  #leadSubmitBtn {
+    font-size: 0.84rem !important;
+    padding: 11px 12px !important;
   }
 
   .floating-cta-bar {
