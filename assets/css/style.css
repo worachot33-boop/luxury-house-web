@@ -267,18 +267,18 @@ a.btn-dark:hover {
 }
 
 .brand-crest {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
   background: #F1F5F9;
   border: 1.5px solid #CBD5E1;
   color: #0F172A;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
   flex-shrink: 0;
-  padding: 5px;
+  padding: 4px;
 }
 
 .brand-crest svg {
@@ -295,16 +295,16 @@ a.btn-dark:hover {
 .brand-text-en {
   display: block;
   font-family: var(--font-sans);
-  font-size: 1.18rem;
-  font-weight: 600;
-  letter-spacing: 0.10em;
+  font-size: 1.30rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   color: var(--text-primary);
   line-height: 1.15;
 }
 
 .brand-text-th {
   display: block;
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
   font-weight: 400;
   margin-top: 2px;
@@ -1927,14 +1927,15 @@ a.btn-dark:hover {
   }
 
   .brand-crest {
-    width: 38px;
-    height: 38px;
-    font-size: 1.25rem;
-    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    padding: 4px;
   }
 
   .brand-text-en {
-    font-size: 1.1rem;
+    font-size: 1.20rem;
+    font-weight: 700;
     letter-spacing: 0.06em;
   }
 
@@ -2068,9 +2069,21 @@ a.btn-dark:hover {
 
   .header-inner,
   .header-inner.header-fluid {
-    min-height: 58px;
+    min-height: 60px;
     padding: 0 12px;
-    gap: 6px;
+    gap: 8px;
+  }
+
+  .brand-crest {
+    width: 44px;
+    height: 44px;
+    border-radius: 9px;
+    padding: 3.5px;
+  }
+
+  .brand-text-en {
+    font-size: 1.15rem;
+    font-weight: 700;
   }
 
   /* Full-bleed Cover for Mobile */
@@ -2470,13 +2483,15 @@ a.btn-dark:hover {
   }
 
   .brand-crest {
-    width: 32px;
-    height: 32px;
-    font-size: 1.1rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    padding: 3px;
   }
 
   .brand-text-en {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    font-weight: 700;
   }
 
   .header-vip-btn {

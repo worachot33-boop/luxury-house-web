@@ -1,23 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <!-- House Gable Roof & Pillars (Option 01 Architecture) -->
-  <path d="M22 68 V42 L20 42 L50 18 L80 42 L78 42 V68" stroke="#334155" stroke-width="3.2"/>
-  <path d="M34 40 L50 28 L66 40" stroke="#334155" stroke-width="3.2"/>
+  <!-- House Gable (Bold Charcoal Architecture) -->
+  <path d="M12 86 V52 L9 52 L50 20 L91 52 L88 52 V86" stroke="#334155" stroke-width="4.2"/>
+  <path d="M28 50 L50 34 L72 50" stroke="#334155" stroke-width="4.2"/>
 
-  <!-- Stag Antlers (Deep Sharp Black) -->
-  <path d="M43 45 C38 38 30 26 21 14" stroke="#0F172A" stroke-width="3.8"/>
-  <path d="M28 24 C22 18 19 14 18 10" stroke="#0F172A" stroke-width="3.4"/>
-  <path d="M34 32 C33 22 35 16 38 10" stroke="#0F172A" stroke-width="3.4"/>
+  <!-- Royal Stag Antlers (Thick, Majestic, Deep Black) -->
+  <!-- Left Main Beam -->
+  <path d="M41 56 C34 47 24 32 12 16" stroke="#0F172A" stroke-width="5"/>
+  <!-- Left Tines -->
+  <path d="M21 29 C14 21 10 16 8 10" stroke="#0F172A" stroke-width="4.4"/>
+  <path d="M29 39 C28 26 31 18 34 10" stroke="#0F172A" stroke-width="4.4"/>
 
-  <path d="M57 45 C62 38 70 26 79 14" stroke="#0F172A" stroke-width="3.8"/>
-  <path d="M72 24 C78 18 81 14 82 10" stroke="#0F172A" stroke-width="3.4"/>
-  <path d="M66 32 C67 22 65 16 62 10" stroke="#0F172A" stroke-width="3.4"/>
+  <!-- Right Main Beam (Symmetrical) -->
+  <path d="M59 56 C66 47 76 32 88 16" stroke="#0F172A" stroke-width="5"/>
+  <!-- Right Tines -->
+  <path d="M79 29 C86 21 90 16 92 10" stroke="#0F172A" stroke-width="4.4"/>
+  <path d="M71 39 C72 26 69 18 66 10" stroke="#0F172A" stroke-width="4.4"/>
 
-  <!-- Stag Ears -->
-  <path d="M43 45 L36 47" stroke="#0F172A" stroke-width="3.2"/>
-  <path d="M57 45 L64 47" stroke="#0F172A" stroke-width="3.2"/>
+  <!-- Ears -->
+  <path d="M41 56 L32 59" stroke="#0F172A" stroke-width="4.2"/>
+  <path d="M59 56 L68 59" stroke="#0F172A" stroke-width="4.2"/>
 
-  <!-- Central "V" Face & Muzzle -->
-  <path d="M43 45 C43 54 44 61 45 66 C46 68 48 70 50 70 C52 70 54 68 55 66 C56 61 57 54 57 45" 
-        stroke="#0F172A" stroke-width="4"/>
-  <path d="M46 50 L50 59 L54 50" stroke="#0F172A" stroke-width="2.8"/>
+  <!-- Prominent "V" Face & Muzzle -->
+  <path d="M41 56 C41 68 43 78 44 84 C45 87 47 89 50 89 C53 89 55 87 56 84 C57 78 59 68 59 56" 
+        stroke="#0F172A" stroke-width="5.2"/>
+  <!-- Inner V Monogram Accent -->
+  <path d="M45 62 L50 74 L55 62" stroke="#0F172A" stroke-width="3.6"/>
 </svg>
