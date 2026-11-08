@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261108_v1_3_0">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261108_mobile_fit_v1_3_1">
   <script id="dynamicJsonLd" type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -225,14 +225,14 @@
           <div class="calc-controls-card">
             <div class="calc-field">
               <label for="calcUnitSelect" style="display:block;font-weight:600;margin-bottom:8px;">เลือกแปลงบ้านที่ต้องการคำนวณ</label>
-              <select id="calcUnitSelect" style="width:100%;padding:11px 12px;border-radius:8px;border:1px solid var(--border-strong);background:var(--bg-ivory);"></select>
+              <select id="calcUnitSelect" style="width:100%;max-width:100%;box-sizing:border-box;padding:11px 12px;border-radius:8px;border:1px solid var(--border-strong);background:var(--bg-ivory);"></select>
             </div>
 
             <div class="calc-field">
               <div class="calc-label-row">
                 <label for="calcPriceInput">ราคาบ้านสุทธิรวมบิ้วอิน (บาท)</label>
               </div>
-              <input type="number" id="calcPriceInput" min="1000000" max="100000000" step="100000" value="8900000" style="width:100%;padding:11px 12px;border-radius:8px;border:1px solid var(--border-strong);background:var(--bg-ivory);font-weight:700;">
+              <input type="number" id="calcPriceInput" min="1000000" max="100000000" step="100000" value="8900000" style="width:100%;max-width:100%;box-sizing:border-box;padding:11px 12px;border-radius:8px;border:1px solid var(--border-strong);background:var(--bg-ivory);font-weight:700;">
             </div>
 
             <div class="calc-field">
@@ -247,7 +247,7 @@
               <div class="calc-label-row">
                 <label for="calcRateInput">อัตราดอกเบี้ยต่อปี (%)</label>
               </div>
-              <input type="number" id="calcRateInput" min="0" max="15" step="0.05" value="2.95" style="width:100%;padding:10px 12px;border-radius:8px;border:1px solid var(--border-strong);background:var(--bg-ivory);">
+              <input type="number" id="calcRateInput" min="0" max="15" step="0.05" value="2.95" style="width:100%;max-width:100%;box-sizing:border-box;padding:10px 12px;border-radius:8px;border:1px solid var(--border-strong);background:var(--bg-ivory);">
               <div class="rate-presets">
                 <button type="button" class="preset-chip active" data-rate="2.95">ดอกเบี้ยพิเศษบ้านหรู 2.95%</button>
                 <button type="button" class="preset-chip" data-rate="3.35">เฉลี่ย 3 ปีแรก 3.35%</button>
@@ -512,13 +512,13 @@
   </div>
 
   <!-- Offline-Compatible Script Wiring (Global Namespace, Cache Busted) -->
-  <script src="assets/js/initial_data.js?v=20261108_v1_3_0"></script>
-  <script src="assets/js/api_client.js?v=20261108_v1_3_0"></script>
-  <script src="assets/js/property_catalog.js?v=20261108_v1_3_0"></script>
-  <script src="assets/js/mortgage_calculator.js?v=20261108_v1_3_0"></script>
-  <script src="assets/js/lead_manager.js?v=20261108_v1_3_0"></script>
-  <script src="assets/js/admin_cms.js?v=20261108_v1_3_0"></script>
-  <script src="assets/js/app.js?v=20261108_v1_3_0"></script>
+  <script src="assets/js/initial_data.js?v=20261108_mobile_fit_v1_3_1"></script>
+  <script src="assets/js/api_client.js?v=20261108_mobile_fit_v1_3_1"></script>
+  <script src="assets/js/property_catalog.js?v=20261108_mobile_fit_v1_3_1"></script>
+  <script src="assets/js/mortgage_calculator.js?v=20261108_mobile_fit_v1_3_1"></script>
+  <script src="assets/js/lead_manager.js?v=20261108_mobile_fit_v1_3_1"></script>
+  <script src="assets/js/admin_cms.js?v=20261108_mobile_fit_v1_3_1"></script>
+  <script src="assets/js/app.js?v=20261108_mobile_fit_v1_3_1"></script>
 </body>
 </html>
 

@@ -92,6 +92,16 @@ select,
 textarea {
   font-family: inherit;
   font-size: 1rem;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+select {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .container {
@@ -99,6 +109,7 @@ textarea {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 24px;
+  box-sizing: border-box;
 }
 
 /* Typography Utilities */
@@ -1209,6 +1220,9 @@ a.btn-dark:hover {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 32px;
   align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .calc-controls-card {
@@ -1217,32 +1231,68 @@ a.btn-dark:hover {
   border-radius: var(--radius-lg);
   padding: 32px;
   box-shadow: var(--shadow-soft);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .calc-field {
   margin-bottom: 22px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .calc-field:last-child {
   margin-bottom: 0;
 }
 
+.calc-field select,
+.calc-field input:not([type="range"]) {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 11px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg-ivory);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.calc-field select:focus,
+.calc-field input:not([type="range"]):focus {
+  outline: 2px solid var(--gold-primary);
+  border-color: var(--gold-primary);
+  background: #FFFFFF;
+}
+
 .calc-label-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 8px;
   font-weight: 600;
   font-size: 0.93rem;
+  gap: 4px 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .calc-value-highlight {
   color: var(--gold-deep);
   font-weight: 700;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .calc-range {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   accent-color: var(--gold-deep);
   cursor: pointer;
 }
@@ -1282,6 +1332,10 @@ a.btn-dark:hover {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 24px 50px -12px rgba(15, 23, 42, 0.12), 0 8px 24px -4px rgba(2, 132, 199, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .calc-card-eyebrow {
@@ -1323,9 +1377,19 @@ a.btn-dark:hover {
 .breakdown-row {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 8px;
   font-size: 0.92rem;
   color: #64748B;
   font-weight: 500;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.breakdown-row span,
+.breakdown-row strong {
+  word-break: break-word;
 }
 
 .breakdown-row strong {
@@ -1421,6 +1485,9 @@ a.btn-dark:hover {
   border: none;
   border-radius: 0;
   box-shadow: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .booking-privilege-panel {
@@ -1433,6 +1500,10 @@ a.btn-dark:hover {
   border-radius: var(--radius-lg);
   border: 1px solid #CBD5E1;
   box-shadow: 0 24px 50px -12px rgba(15, 23, 42, 0.12), 0 8px 24px -4px rgba(2, 132, 199, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .booking-eyebrow {
@@ -1510,16 +1581,27 @@ a.btn-dark:hover {
   border-radius: var(--radius-lg);
   border: 1px solid #E2E8F0;
   box-shadow: 0 16px 40px -10px rgba(15, 23, 42, 0.06);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .form-grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .form-group {
   margin-bottom: 16px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .form-group label {
@@ -1534,11 +1616,14 @@ a.btn-dark:hover {
 .form-group select,
 .form-group textarea {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 11px 14px;
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
   background: var(--bg-ivory);
   color: var(--text-primary);
+  text-overflow: ellipsis;
 }
 
 .form-group input:focus,
@@ -1931,7 +2016,10 @@ a.btn-dark:hover {
   .craft-grid,
   .calc-grid,
   .booking-wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .hero-metrics-panoramic {
@@ -2086,13 +2174,17 @@ a.btn-dark:hover {
     padding: 7px 14px;
   }
 
-  /* Before/After Compare Slider */
+  /* Before/After Compare Slider & Sections */
   .craft-section,
   .catalog-section,
+  .calculator-section,
   .calc-section,
   .location-section,
   .booking-section {
     padding: 44px 0;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .section-title {
@@ -2133,7 +2225,19 @@ a.btn-dark:hover {
   .admin-kpi-row,
   .admin-form-grid-4,
   .admin-form-grid-3 {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .calc-grid,
+  .booking-wrapper {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .specs-strip {
@@ -2144,7 +2248,95 @@ a.btn-dark:hover {
   .booking-form-panel,
   .calc-controls-card,
   .calc-summary-card {
-    padding: 20px;
+    padding: clamp(16px, 4.5vw, 22px) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .calc-field,
+  .form-group {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin-bottom: 16px !important;
+  }
+
+  .calc-field select,
+  .calc-field input:not([type="range"]),
+  .form-group select,
+  .form-group input,
+  .form-group textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    font-size: 0.92rem !important;
+  }
+
+  .calc-label-row {
+    flex-wrap: wrap !important;
+    gap: 4px 8px !important;
+    width: 100% !important;
+  }
+
+  .calc-value-highlight {
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+
+  .calc-range {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 8px 0 !important;
+  }
+
+  .rate-presets {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    width: 100% !important;
+    margin-top: 8px !important;
+  }
+
+  .preset-chip {
+    font-size: 0.78rem !important;
+    padding: 6px 10px !important;
+    flex: 1 1 auto !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .monthly-pay-number {
+    font-size: clamp(1.65rem, 6.2vw, 2.2rem) !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+  }
+
+  .calc-breakdown {
+    padding: 14px 14px !important;
+    margin: 16px 0 !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .breakdown-row {
+    flex-wrap: wrap !important;
+    gap: 2px 8px !important;
+    font-size: 0.88rem !important;
+  }
+
+  .breakdown-row span,
+  .breakdown-row strong {
+    word-break: break-word !important;
   }
 
   .modal-backdrop {
@@ -2178,7 +2370,43 @@ a.btn-dark:hover {
   }
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .booking-privilege-panel,
+  .booking-form-panel,
+  .calc-controls-card,
+  .calc-summary-card {
+    padding: 16px 14px !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .section-title {
+    font-size: clamp(1.3rem, 5.5vw, 1.6rem) !important;
+  }
+
+  .calc-field,
+  .form-group {
+    margin-bottom: 14px !important;
+  }
+
+  .rate-presets {
+    gap: 5px !important;
+  }
+
+  .preset-chip {
+    font-size: 0.74rem !important;
+    padding: 5px 8px !important;
+  }
+}
+
 @media (max-width: 400px) {
+  .container {
+    padding: 0 12px;
+  }
+
   .header-inner {
     min-height: 56px;
   }
@@ -2196,6 +2424,13 @@ a.btn-dark:hover {
   .header-vip-btn {
     padding: 5px 10px;
     font-size: 0.78rem;
+  }
+
+  .booking-privilege-panel,
+  .booking-form-panel,
+  .calc-controls-card,
+  .calc-summary-card {
+    padding: 14px 12px !important;
   }
 
   .floating-cta-bar {
