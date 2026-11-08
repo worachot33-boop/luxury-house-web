@@ -5,6 +5,13 @@
 
 ---
 
+## 🔖 เวอร์ชันปัจจุบัน (Current Version)
+- **เวอร์ชัน**: `v1.1.0 (Mobile Responsive & Full-Width Fix)`
+- **สถานะการอัปเดตล่าสุด**: แก้ไขปัญหาหน้าจอมือถือไม่เต็มจอ (Horizontal Overflow), ปรับ Header บนจอมือถือให้กะทัดรัด, ย้ายปุ่มจัดการหลังบ้านเข้าเมนู Hamburger (`☰`), และอัปเดต Cache Buster เป็น `20261108_mobile_v1`
+- **ลิงก์เข้าชมสด**: [https://worachot33-boop.github.io/luxury-house-web/?v=20261108_mobile_v1](https://worachot33-boop.github.io/luxury-house-web/?v=20261108_mobile_v1)
+
+---
+
 ## 🌟 ฟีเจอร์เด่นของระบบ (Key Features)
 
 1. **Before / After Comparison Slider**: เลื่อนสไลเดอร์เปรียบเทียบห้องจริง *"บ้านเปล่าส่งมอบ vs บ้านบิ้วอินพร้อมอยู่"* ในมุมมองเดียวกัน
@@ -13,6 +20,7 @@
 4. **Smart Mortgage Calculator**: โปรแกรมคำนวณเงินดาวน์และยอดผ่อนต่อเดือนอัตโนมัติ อ้างอิงตามเกณฑ์ LTV ธปท.
 5. **VIP Private Viewing Booking**: ฟอร์มนัดหมายเข้าชมโครงการแบบส่วนตัว ตรวจสอบเบอร์โทรและวันที่ล่วงหน้า
 6. **Admin CMS & CSV Export**: ระบบหลังบ้านสำหรับฝ่ายขาย (รหัสผ่านเริ่มต้น `8899`) เพื่อปรับสถานะแปลงบ้านแบบเรียลไทม์ และส่งออกรายชื่อลูกค้าเป็นไฟล์ Excel/CSV ภาษาไทยสมบูรณ์ (`\uFEFF` UTF-8 BOM)
+7. **Mobile-First Responsive Layout**: รองรับการเปิดบนสมาร์ตโฟนทุกขนาดหน้าจอ (iOS & Android) เต็มจอ 100% ไม่มีแถบเลื่อนแนวนอนกวนใจ
 
 ---
 
@@ -20,9 +28,23 @@
 
 ### 1. เปิดดูออนไลน์ผ่าน GitHub Pages (บนมือถือหรือคอมพิวเตอร์)
 - เข้าชมได้ทันทีที่: [https://worachot33-boop.github.io/luxury-house-web/](https://worachot33-boop.github.io/luxury-house-web/)
+- หรือเปิดผ่านลิงก์บังคับรีเฟรชแคช: [https://worachot33-boop.github.io/luxury-house-web/?v=20261108_mobile_v1](https://worachot33-boop.github.io/luxury-house-web/?v=20261108_mobile_v1)
 
 ### 2. เปิดใช้งานผ่านเครื่องส่วนกลางหน้างาน (Sales Gallery Local Server)
 - ดับเบิลคลิกไฟล์ `start_offline.bat`
 - เข้าใช้งานผ่านเบราว์เซอร์: `http://localhost:4001/`
-- หรือเปิดบนมือถือผ่าน Wi-Fi เดียวกันตาม IP ที่ระบบแจ้งในคอนโซล
+- หรือเปิดบนมือถือผ่าน Wi-Fi เดียวกันตาม IP ที่ระบบแจ้งในคอนโซล (เช่น `http://192.168.1.40:4001/`)
+
+---
+
+## 📋 ประวัติการปรับปรุงเวอร์ชัน (Version Changelog)
+- **v1.1.0** (2026-11-08):
+  - แก้ไข Horizontal Overflow บนมือถือ (เพิ่ม `overflow-x: hidden; width: 100%;`)
+  - ซ่อนปุ่ม "สำหรับฝ่ายขาย" ออกจาก Header แถวบนของจอมือถือ และย้ายเข้าไปอยู่ในเมนู `☰`
+  - ปรับ Header บนจอมือถือให้มีเฉพาะ Logo + ปุ่มนัดชม VIP + ปุ่ม `☰`
+  - ปรับปุ่ม Hero CTA ให้จัดเรียงแนวตั้งและตัดบรรทัดได้ ไม่ดันหน้าจอ
+  - ปรับแต่ง Floating CTA ด้านล่างให้พอดีกับหน้าจอมือถือ
+  - อัปเดต Cache Buster ทุกสคริปต์เป็น `20261108_mobile_v1`
+- **v1.0.0** (2026-11-08):
+  - Initial Release เปิดตัวโครงการ THE AURELIA RESIDENCE สถาปัตยกรรม Clean Web Architecture Offline 100%
 
