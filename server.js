@@ -260,7 +260,8 @@ function startServer(port = PORT) {
   server.listen(port, () => {
     console.log('==========================================================');
     console.log(`  ${PROJECT_BRAND.name} - Full-Stack Server`);
-    console.log(`  URL          : http://localhost:${port}/`);
+    console.log(`  Local PC URL : http://localhost:${port}/`);
+    console.log(`  Mobile Wi-Fi : http://192.168.1.40:${port}/`);
     console.log(`  API Health   : http://localhost:${port}/api/health`);
     console.log(`  Properties   : http://localhost:${port}/api/properties`);
     console.log('==========================================================');
