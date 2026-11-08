@@ -1,4 +1,4 @@
-# THE AURELIA RESIDENCE — Luxury Built-in House Web Application
+# HAVEN LUXE ESTATE — Luxury Built-in House Web Application
 
 > **โครงการบ้านเดี่ยวหรู ตกแต่งบิ้วอินครบพร้อมเข้าอยู่ (ระดับราคา 8.9 – 19.5 ล้านบาท)**  
 > โทนสี Warm Luxury (ขาวครีม – ทองแชมเปญ) พร้อมฟังก์ชันเปิดใช้งานแบบ Offline 100%
@@ -6,9 +6,9 @@
 ---
 
 ## 🔖 เวอร์ชันปัจจุบัน (Current Version)
-- **เวอร์ชัน**: `v1.1.0 (Mobile Responsive & Full-Width Fix)`
-- **สถานะการอัปเดตล่าสุด**: แก้ไขปัญหาหน้าจอมือถือไม่เต็มจอ (Horizontal Overflow), ปรับ Header บนจอมือถือให้กะทัดรัด, ย้ายปุ่มจัดการหลังบ้านเข้าเมนู Hamburger (`☰`), และอัปเดต Cache Buster เป็น `20261108_mobile_v1`
-- **ลิงก์เข้าชมสด**: [https://worachot33-boop.github.io/luxury-house-web/?v=20261108_mobile_v1](https://worachot33-boop.github.io/luxury-house-web/?v=20261108_mobile_v1)
+- **เวอร์ชัน**: `v1.2.0 (Brand Renaming to Haven Luxe Estate)`
+- **สถานะการอัปเดตล่าสุด**: เปลี่ยนชื่อแบรนด์โครงการอย่างเป็นทางการเป็น **HAVEN LUXE ESTATE** อัปเดตโลโก้ Crest ตราสัญลักษณ์เป็นตัวอักษร **"H"** สีทองแชมเปญ, อัปเดต Favicon, LINE OA (`@havenluxe.estate`), Metadata SEO และ Cache Buster เป็น `20261108_haven_luxe_v1`
+- **ลิงก์เข้าชมสด**: [https://worachot33-boop.github.io/luxury-house-web/?v=20261108_haven_luxe_v1](https://worachot33-boop.github.io/luxury-house-web/?v=20261108_haven_luxe_v1)
 
 ---
 
@@ -28,7 +28,7 @@
 
 ### 1. เปิดดูออนไลน์ผ่าน GitHub Pages (บนมือถือหรือคอมพิวเตอร์)
 - เข้าชมได้ทันทีที่: [https://worachot33-boop.github.io/luxury-house-web/](https://worachot33-boop.github.io/luxury-house-web/)
-- หรือเปิดผ่านลิงก์บังคับรีเฟรชแคช: [https://worachot33-boop.github.io/luxury-house-web/?v=20261108_mobile_v1](https://worachot33-boop.github.io/luxury-house-web/?v=20261108_mobile_v1)
+- หรือเปิดผ่านลิงก์บังคับรีเฟรชแคช: [https://worachot33-boop.github.io/luxury-house-web/?v=20261108_haven_luxe_v1](https://worachot33-boop.github.io/luxury-house-web/?v=20261108_haven_luxe_v1)
 
 ### 2. เปิดใช้งานผ่านเครื่องส่วนกลางหน้างาน (Sales Gallery Local Server)
 - ดับเบิลคลิกไฟล์ `start_offline.bat`
@@ -38,6 +38,14 @@
 ---
 
 ## 📋 ประวัติการปรับปรุงเวอร์ชัน (Version Changelog)
+- **v1.2.0** (2026-11-08):
+  - เปลี่ยนชื่อโครงการเป็น **HAVEN LUXE ESTATE**
+  - อัปเดต Brand Crest ในแถบ Header เป็นอักษรย่อ **"H"**
+  - อัปเดต `favicon.svg` ไอคอนแท็บเบราว์เซอร์เป็นตราประทับอักษรย่อ **"H"**
+  - อัปเดต LINE Official Account เป็น `@havenluxe.estate`
+  - อัปเดตชื่อไฟล์ส่งออก CSV ของฝ่ายขายเป็น `HAVEN_LUXE_VIP_Leads_YYYYMMDD.csv`
+  - อัปเดต Schema.org JSON-LD และ Open Graph Title/Description เป็น HAVEN LUXE ESTATE
+  - อัปเดต Cache Buster เป็น `20261108_haven_luxe_v1`
 - **v1.1.0** (2026-11-08):
   - แก้ไข Horizontal Overflow บนมือถือ (เพิ่ม `overflow-x: hidden; width: 100%;`)
   - ซ่อนปุ่ม "สำหรับฝ่ายขาย" ออกจาก Header แถวบนของจอมือถือ และย้ายเข้าไปอยู่ในเมนู `☰`
@@ -46,5 +54,6 @@
   - ปรับแต่ง Floating CTA ด้านล่างให้พอดีกับหน้าจอมือถือ
   - อัปเดต Cache Buster ทุกสคริปต์เป็น `20261108_mobile_v1`
 - **v1.0.0** (2026-11-08):
-  - Initial Release เปิดตัวโครงการ THE AURELIA RESIDENCE สถาปัตยกรรม Clean Web Architecture Offline 100%
+  - Initial Release เปิดตัวโครงการสถาปัตยกรรม Clean Web Architecture Offline 100%
+
 

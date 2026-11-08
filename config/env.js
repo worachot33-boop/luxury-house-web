@@ -10,11 +10,11 @@ module.exports = {
   DATA_EXCEL_DIR: path.join(ROOT_DIR, 'data_excel'),
   ADMIN_PASSCODE: process.env.ADMIN_PASSCODE || '8899',
   PROJECT_BRAND: {
-    name: 'THE AURELIA RESIDENCE',
+    name: 'HAVEN LUXE ESTATE',
     thaiSubtitle: 'โครงการบ้านเดี่ยวหรู ตกแต่งบิ้วอินครบพร้อมเข้าอยู่',
     priceRangeText: '8.9 – 19.5 ล้านบาท',
     phone: '02-889-9900',
-    lineId: '@aurelia.residence',
+    lineId: '@havenluxe.estate',
     locationName: 'วัชรพล – ด่านจตุโชติ (ใกล้ทางด่วนฉลองรัช & วงแหวนตะวันออก)'
   }
 };

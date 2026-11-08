@@ -197,7 +197,7 @@
       var schemaObj = {
         '@context': 'https://schema.org',
         '@type': 'RealEstateAgent',
-        name: (state.brand && state.brand.name) || 'THE AURELIA RESIDENCE',
+        name: (state.brand && state.brand.name) || 'HAVEN LUXE ESTATE',
         description: 'โครงการบ้านเดี่ยวหรู ตกแต่งบิ้วอินครบพร้อมเข้าอยู่ ราคา ' + minMil + ' – ' + maxMil + ' ล้านบาท ทำเลวัชรพล – ด่านจตุโชติ',
         telephone: (state.brand && state.brand.phone) || '02-889-9900',
         priceRange: 'THB ' + minP.toLocaleString('en-US') + ' - ' + maxP.toLocaleString('en-US'),

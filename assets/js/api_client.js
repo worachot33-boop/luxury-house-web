@@ -1,16 +1,16 @@
 (function (window) {
   'use strict';
 
-  var AUTH_SESSION_KEY = 'aurelia_admin_passcode_session';
-  var LOCAL_PROPERTIES_CACHE_KEY = 'aurelia_properties_offline_cache_v1';
-  var LOCAL_LEADS_CACHE_KEY = 'aurelia_leads_offline_cache_v1';
+  var AUTH_SESSION_KEY = 'haven_luxe_admin_passcode_session';
+  var LOCAL_PROPERTIES_CACHE_KEY = 'haven_luxe_properties_offline_cache_v1';
+  var LOCAL_LEADS_CACHE_KEY = 'haven_luxe_leads_offline_cache_v1';
 
   var isFileProtocol = window.location.protocol === 'file:';
 
   // Strict Storage Boundary: Admin passcode is stored ONLY in sessionStorage
   function getAdminPasscode() {
     try {
-      return window.sessionStorage.getItem(AUTH_SESSION_KEY) || '';
+      return window.sessionStorage.getItem(AUTH_SESSION_KEY) || window.sessionStorage.getItem('aurelia_admin_passcode_session') || '';
     } catch (_) {
       return '';
     }

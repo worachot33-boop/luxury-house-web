@@ -174,7 +174,7 @@
   }
 
   function bindLineButtons(brand) {
-    var lineId = (brand && brand.lineId) || '@aurelia.residence';
+    var lineId = (brand && brand.lineId) || '@havenluxe.estate';
     document.querySelectorAll('[data-action="copy-line"]').forEach(function (btn) {
       var defaultLabel = btn.textContent;
       btn.addEventListener('click', function () {
