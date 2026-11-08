@@ -1,20 +1,19 @@
-# HAVEN LUXE ESTATE — Luxury Built-in House Web Application
+# VARA LUXE ESTATE — Luxury Built-in House Web Application
 
 > **คฤหาสน์หรูระดับเวิลด์คลาส ตกแต่งบิ้วอินครบพร้อมเข้าอยู่โดยทีมผู้เชี่ยวชาญ**  
+> ตราสัญลักษณ์ The Royal Stag Emblem (Option 01: Antler & Gable Roof V-Monogram)  
 > โทนสี Clean Modern Light (ขาว – เทา – ฟ้า) สว่าง สะอาดตา หรูหรามีมิติ พร้อมฟังก์ชันเปิดใช้งานแบบ Offline 100%
 
 ---
 
 ## 🔖 เวอร์ชันปัจจุบัน (Current Version)
-- **เวอร์ชัน**: `v1.3.0 (Clean Modern Light & Luxury Architectural Gallery Redesign)`
+- **เวอร์ชัน**: `v1.4.0 (VARA LUXE ESTATE Brand Identity Transition & Option 01 Royal Stag Logo)`
 - **สถานะการอัปเดตล่าสุด**: 
-  - ออกแบบเลย์เอาต์ใหม่สไตล์ลักชัวรีมินิมอลตามแบบเอกสาร `Request change2.pdf`
-  - ปรับภาพปก Hero Full-Bleed กว้างเต็มจอ 100% พร้อมหัวข้อ 2 บรรทัดคมชัด กึ่งกลางระดับสายตา
-  - เพิ่มแกลเลอรีผลงานสถาปัตยกรรมและงานบิ้วอินหรู (Edge-to-Edge 8 รูปภาพ 2 แถว × 4 คอลัมน์) รองรับคลิกขยายภาพ Lightbox Modal ความละเอียดสูง
-  - ปรับธีมสีเป็น **Clean Modern Light (ขาว – เทา – ฟ้า)** พร้อมมิติเงาและความลึกระดับพรีเมียม
-  - ปรับเอฟเฟกต์เมนูนำทางด้านบนเป็นปุ่มแคปซูลฟ้าอ่อนเรืองแสงนุ่มนวล (Soft Sky Blue Hover Pill)
-  - จัดการแสดงผลหัวข้อหมวดทำเลในบรรทัดเดียวกันแบบ Single-line
-- **ลิงก์เข้าชมสดบน GitHub Pages**: [https://worachot33-boop.github.io/luxury-house-web/?v=20261108_v1_3_0](https://worachot33-boop.github.io/luxury-house-web/?v=20261108_v1_3_0)
+  - เปลี่ยนชื่อแบรนด์โครงการอย่างเป็นทางการเป็น **VARA LUXE ESTATE** (โดยคุณวรโชติ / เดียร์)
+  - ติดตั้งตราสัญลักษณ์ **Option 01: Royal Stag Crest (หัวกวาง & จั่วหลังคาบ้าน V-Monogram)** บน Header และ Favicon
+  - ปรับปรุงการตัดคำของปุ่มคำนวณสินเชื่อและปุ่มส่งฟอร์มนัดหมายบนสมาร์ตโฟนให้กระชับ พอดีทุกขนาดหน้าจอ
+  - ปรับเปลี่ยน LINE Official Account เป็น `@varaluxe.estate`
+- **ลิงก์เข้าชมสดบน GitHub Pages**: [https://worachot33-boop.github.io/luxury-house-web/?v=20261109_varaluxe_v1_4_0](https://worachot33-boop.github.io/luxury-house-web/?v=20261109_varaluxe_v1_4_0)
 
 ---
 

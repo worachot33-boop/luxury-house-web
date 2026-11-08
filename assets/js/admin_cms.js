@@ -117,7 +117,7 @@
       var link = document.createElement('a');
       var dateTag = new Date().toISOString().slice(0, 10).replace(/-/g, '');
       link.href = url;
-      link.download = 'HAVEN_LUXE_VIP_Leads_' + dateTag + '.csv';
+      link.download = 'VARA_LUXE_VIP_Leads_' + dateTag + '.csv';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

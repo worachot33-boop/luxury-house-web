@@ -2,11 +2,11 @@
   'use strict';
 
   var BRAND = {
-    name: 'HAVEN LUXE ESTATE',
+    name: 'VARA LUXE ESTATE',
     thaiSubtitle: 'โครงการบ้านเดี่ยวหรู ตกแต่งบิ้วอินครบพร้อมเข้าอยู่',
     priceRangeText: '8.9 – 19.5 ล้านบาท',
     phone: '02-889-9900',
-    lineId: '@havenluxe.estate',
+    lineId: '@varaluxe.estate',
     locationName: 'วัชรพล – ด่านจตุโชติ (ใกล้ทางด่วนฉลองรัช & วงแหวนตะวันออก)'
   };
 

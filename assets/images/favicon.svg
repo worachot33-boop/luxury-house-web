@@ -1,5 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <rect width="64" height="64" rx="14" fill="#0F172A"/>
-  <rect x="4" y="4" width="56" height="56" rx="11" fill="none" stroke="#0EA5E9" stroke-width="1.5"/>
-  <path d="M19 16h6v13h14V16h6v32h-6V35H25v13h-6V16z" fill="#38BDF8"/>
+  <rect x="3" y="3" width="58" height="58" rx="11" fill="none" stroke="#0284C7" stroke-width="1.5" stroke-opacity="0.6"/>
+  
+  <g transform="translate(4, 2) scale(0.56)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- House -->
+    <path d="M22 68 V42 L20 42 L50 18 L80 42 L78 42 V68" stroke="#7DD3FC" stroke-width="4.2"/>
+    <path d="M34 40 L50 28 L66 40" stroke="#7DD3FC" stroke-width="4.2"/>
+
+    <!-- Stag Antlers -->
+    <path d="M43 45 C38 38 30 26 21 14" stroke="#38BDF8" stroke-width="4.8"/>
+    <path d="M28 24 C22 18 19 14 18 10" stroke="#38BDF8" stroke-width="4.2"/>
+    <path d="M34 32 C33 22 35 16 38 10" stroke="#38BDF8" stroke-width="4.2"/>
+
+    <path d="M57 45 C62 38 70 26 79 14" stroke="#38BDF8" stroke-width="4.8"/>
+    <path d="M72 24 C78 18 81 14 82 10" stroke="#38BDF8" stroke-width="4.2"/>
+    <path d="M66 32 C67 22 65 16 62 10" stroke="#38BDF8" stroke-width="4.2"/>
+
+    <!-- Stag Ears -->
+    <path d="M43 45 L36 47" stroke="#38BDF8" stroke-width="4.2"/>
+    <path d="M57 45 L64 47" stroke="#38BDF8" stroke-width="4.2"/>
+
+    <!-- V Face -->
+    <path d="M43 45 C43 54 44 61 45 66 C46 68 48 70 50 70 C52 70 54 68 55 66 C56 61 57 54 57 45" 
+          stroke="#38BDF8" stroke-width="5"/>
+    <path d="M46 50 L50 59 L54 50" stroke="#38BDF8" stroke-width="3.5"/>
+  </g>
 </svg>

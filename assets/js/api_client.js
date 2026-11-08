@@ -1,9 +1,9 @@
 (function (window) {
   'use strict';
 
-  var AUTH_SESSION_KEY = 'haven_luxe_admin_passcode_session';
-  var LOCAL_PROPERTIES_CACHE_KEY = 'haven_luxe_properties_offline_cache_v1';
-  var LOCAL_LEADS_CACHE_KEY = 'haven_luxe_leads_offline_cache_v1';
+  var AUTH_SESSION_KEY = 'vara_luxe_admin_passcode_session';
+  var LOCAL_PROPERTIES_CACHE_KEY = 'vara_luxe_properties_offline_cache_v1';
+  var LOCAL_LEADS_CACHE_KEY = 'vara_luxe_leads_offline_cache_v1';
 
   var isFileProtocol = window.location.protocol === 'file:';
 
