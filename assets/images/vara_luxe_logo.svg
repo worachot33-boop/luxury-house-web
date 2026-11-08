@@ -1,43 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <defs>
-    <linearGradient id="varaCyan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="100%" stop-color="#0284C7"/>
-    </linearGradient>
-    <linearGradient id="varaGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#BAE6FD"/>
-      <stop offset="50%" stop-color="#7DD3FC"/>
-      <stop offset="100%" stop-color="#38BDF8"/>
-    </linearGradient>
-  </defs>
+  <!-- House Gable Roof & Pillars (Option 01 Architecture) -->
+  <path d="M22 68 V42 L20 42 L50 18 L80 42 L78 42 V68" stroke="#334155" stroke-width="3.2"/>
+  <path d="M34 40 L50 28 L66 40" stroke="#334155" stroke-width="3.2"/>
 
-  <!-- Architectural House Gable (Option 01 - Gold/Cyan Accent) -->
-  <!-- Outer Roof Peak & House Pillars -->
-  <path d="M22 68 V42 L20 42 L50 18 L80 42 L78 42 V68" 
-        stroke="url(#varaGold)" stroke-width="3.2"/>
-  <!-- Inner Rafter Chevron -->
-  <path d="M34 40 L50 28 L66 40" 
-        stroke="url(#varaGold)" stroke-width="3.2"/>
+  <!-- Stag Antlers (Deep Sharp Black) -->
+  <path d="M43 45 C38 38 30 26 21 14" stroke="#0F172A" stroke-width="3.8"/>
+  <path d="M28 24 C22 18 19 14 18 10" stroke="#0F172A" stroke-width="3.4"/>
+  <path d="M34 32 C33 22 35 16 38 10" stroke="#0F172A" stroke-width="3.4"/>
 
-  <!-- Royal Stag Head & Antlers (Option 01 - Sleek Minimalist V) -->
-  <!-- Left Antler Main Beam & Tines -->
-  <path d="M43 45 C38 38 30 26 21 14" stroke="url(#varaCyan)" stroke-width="3.6"/>
-  <path d="M28 24 C22 18 19 14 18 10" stroke="url(#varaCyan)" stroke-width="3.2"/>
-  <path d="M34 32 C33 22 35 16 38 10" stroke="url(#varaCyan)" stroke-width="3.2"/>
+  <path d="M57 45 C62 38 70 26 79 14" stroke="#0F172A" stroke-width="3.8"/>
+  <path d="M72 24 C78 18 81 14 82 10" stroke="#0F172A" stroke-width="3.4"/>
+  <path d="M66 32 C67 22 65 16 62 10" stroke="#0F172A" stroke-width="3.4"/>
 
-  <!-- Right Antler Main Beam & Tines (Symmetrical) -->
-  <path d="M57 45 C62 38 70 26 79 14" stroke="url(#varaCyan)" stroke-width="3.6"/>
-  <path d="M72 24 C78 18 81 14 82 10" stroke="url(#varaCyan)" stroke-width="3.2"/>
-  <path d="M66 32 C67 22 65 16 62 10" stroke="url(#varaCyan)" stroke-width="3.2"/>
+  <!-- Stag Ears -->
+  <path d="M43 45 L36 47" stroke="#0F172A" stroke-width="3.2"/>
+  <path d="M57 45 L64 47" stroke="#0F172A" stroke-width="3.2"/>
 
-  <!-- Stag Ears / Brow Accents -->
-  <path d="M43 45 L36 47" stroke="url(#varaCyan)" stroke-width="3.2"/>
-  <path d="M57 45 L64 47" stroke="url(#varaCyan)" stroke-width="3.2"/>
-
-  <!-- Central "V" Face & Muzzle (Iconic VARA Monogram) -->
+  <!-- Central "V" Face & Muzzle -->
   <path d="M43 45 C43 54 44 61 45 66 C46 68 48 70 50 70 C52 70 54 68 55 66 C56 61 57 54 57 45" 
-        stroke="url(#varaCyan)" stroke-width="3.8"/>
-  <!-- Inner V Accent -->
-  <path d="M46 50 L50 59 L54 50" 
-        stroke="url(#varaCyan)" stroke-width="2.6"/>
+        stroke="#0F172A" stroke-width="4"/>
+  <path d="M46 50 L50 59 L54 50" stroke="#0F172A" stroke-width="2.8"/>
 </svg>

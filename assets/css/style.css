@@ -270,13 +270,13 @@ a.btn-dark:hover {
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background: var(--bg-espresso);
-  border: 1.5px solid var(--gold-light);
-  color: var(--gold-light);
+  background: #F1F5F9;
+  border: 1.5px solid #CBD5E1;
+  color: #0F172A;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.18);
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.08);
   flex-shrink: 0;
   padding: 5px;
 }
