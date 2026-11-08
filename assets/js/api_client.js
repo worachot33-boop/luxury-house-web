@@ -10,7 +10,7 @@
   // Strict Storage Boundary: Admin passcode is stored ONLY in sessionStorage
   function getAdminPasscode() {
     try {
-      return window.sessionStorage.getItem(AUTH_SESSION_KEY) || window.sessionStorage.getItem('aurelia_admin_passcode_session') || '';
+      return window.sessionStorage.getItem(AUTH_SESSION_KEY) || '';
     } catch (_) {
       return '';
     }

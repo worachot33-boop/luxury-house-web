@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 const { PORT, ROOT_DIR, DATA_EXCEL_DIR, PROJECT_BRAND } = require('./config/env');
 const { initSchema, closeDb } = require('./db/connection');
 const { createApiDispatcher } = require('./routes/router_engine');
@@ -257,11 +258,33 @@ function buildApp() {
 function startServer(port = PORT) {
   const server = buildApp();
 
-  server.listen(port, () => {
+  server.on('error', (err) => {
+    if (err.code === 'EADDRINUSE' || err.code === 'EACCES') {
+      console.error(`[SERVER] Warning: Port ${port} is restricted or in use (${err.code}).`);
+    } else {
+      console.error('[SERVER] Server error:', err);
+    }
+  });
+
+  server.listen(port, '0.0.0.0', () => {
+    let wifiIp = '127.0.0.1';
+    try {
+      const ifaces = os.networkInterfaces();
+      for (const name of Object.keys(ifaces)) {
+        for (const net of ifaces[name] || []) {
+          if (net.family === 'IPv4' && !net.internal) {
+            wifiIp = net.address;
+            break;
+          }
+        }
+        if (wifiIp !== '127.0.0.1') break;
+      }
+    } catch (_) {}
+
     console.log('==========================================================');
     console.log(`  ${PROJECT_BRAND.name} - Full-Stack Server`);
     console.log(`  Local PC URL : http://localhost:${port}/`);
-    console.log(`  Mobile Wi-Fi : http://192.168.1.40:${port}/`);
+    console.log(`  Mobile Wi-Fi : http://${wifiIp}:${port}/`);
     console.log(`  API Health   : http://localhost:${port}/api/health`);
     console.log(`  Properties   : http://localhost:${port}/api/properties`);
     console.log('==========================================================');

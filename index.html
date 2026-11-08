@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HAVEN LUXE ESTATE | โครงการบ้านเดี่ยวหรู บิ้วอินครบพร้อมเข้าอยู่ 8.9 – 19.5 ล้านบาท</title>
-  <meta name="description" content="HAVEN LUXE ESTATE โครงการบ้านเดี่ยวระดับ Luxury ตกแต่งบิ้วอินครบทั้งหลัง หิ้วกระเป๋าเข้าอยู่ได้ทันที ทำเลวัชรพล – ด่านจตุโชติ ใกล้ทางด่วนฉลองรัช ราคา 8.9 – 19.5 ล้านบาท">
+  <title>HAVEN LUXE ESTATE | คฤหาสน์หรู ตกแต่งบิ้วอินครบพร้อมเข้าอยู่ วัชรพล – ด่านจตุโชติ</title>
+  <meta name="description" content="HAVEN LUXE ESTATE คฤหาสน์ระดับ Luxury ตกแต่งบิ้วอินครบทั้งหลัง หิ้วกระเป๋าเข้าอยู่ได้ทันที ทำเลวัชรพล – ด่านจตุโชติ ใกล้ทางด่วนฉลองรัช">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="HAVEN LUXE ESTATE | Luxury Turnkey Built-in Residence (8.9 – 19.5 ล้านบาท)">
+  <meta property="og:title" content="HAVEN LUXE ESTATE | Luxury Turnkey Built-in Residence">
   <meta property="og:description" content="บ้านเดี่ยวหรูแต่งบิ้วอินครบระดับโรงแรม 5 ดาว มูลค่างานบิ้วอินสูงสุด 3.8 ล้านบาท พร้อมเข้าอยู่ทันที นัดหมายชมโครงการแบบส่วนตัวได้ทุกวัน">
   <meta property="og:image" content="assets/images/villa_celeste_hero.jpg">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261108_haven_luxe_v1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261108_v1_3_0">
   <script id="dynamicJsonLd" type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,138 +37,108 @@
     ✦ กำลังเปิดใช้งานในโหมด Standalone Offline (แสดงผลจากฐานข้อมูลสำรองในเครื่อง) • รัน <code>start_offline.bat</code> เพื่อเชื่อมต่อ SQLite เต็มรูปแบบ
   </div>
 
-  <!-- Top Navigation -->
+  <!-- Top Navigation (Minimalist Ultra-Clean Header - Edge to Edge) -->
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="header-inner header-fluid">
       <a href="#top" class="brand-logo" aria-label="HAVEN LUXE ESTATE หน้าแรก">
         <span class="brand-crest" aria-hidden="true">H</span>
-        <span>
+        <span class="brand-info">
           <span class="brand-text-en">HAVEN LUXE</span>
-          <span class="brand-text-th">Luxury Built-in Estate • 8.9 – 19.5 ลบ.</span>
+          <span class="brand-text-th">Luxury Built-in Residence</span>
         </span>
       </a>
 
-      <nav id="mainNav" class="main-nav" aria-label="เมนูหลัก">
-        <a href="#craftSection">จุดเด่นงานบิ้วอิน</a>
-        <a href="#catalogSection">แบบบ้าน &amp; ราคา</a>
-        <a href="#calculatorSection">คำนวณสินเชื่อ</a>
-        <a href="#locationSection">ทำเลศักยภาพ</a>
-        <a href="#bookingSection">นัดชมโครงการ</a>
-        <div class="mobile-nav-admin-divider" aria-hidden="true"></div>
-        <button type="button" id="mobileAdminCmsBtn" class="btn btn-outline btn-sm mobile-admin-link">
-          สำหรับฝ่ายขาย
-        </button>
-      </nav>
+      <!-- Right Group: All nav links + action buttons aligned to the right -->
+      <div class="header-right-group">
+        <nav id="mainNav" class="main-nav" aria-label="เมนูหลัก">
+          <a href="#craftSection" class="nav-link">จุดเด่นบิ้วอิน</a>
+          <a href="#catalogSection" class="nav-link">แบบบ้าน &amp; ราคา</a>
+          <a href="#calculatorSection" class="nav-link">คำนวณสินเชื่อ</a>
+          <a href="#locationSection" class="nav-link">ทำเล</a>
+          <a href="#bookingSection" class="nav-link">นัดชมโครงการ</a>
+          <div class="mobile-nav-admin-divider" aria-hidden="true"></div>
+          <button type="button" id="mobileAdminCmsBtn" class="btn btn-outline btn-sm mobile-admin-link">
+            สำหรับฝ่ายขาย
+          </button>
+        </nav>
 
-      <div class="header-actions">
-        <button type="button" id="openAdminCmsBtn" class="btn btn-outline btn-sm desktop-admin-btn" title="สำหรับเจ้าหน้าที่ฝ่ายขาย">
-          สำหรับฝ่ายขาย
-        </button>
-        <a href="#bookingSection" class="btn btn-gold btn-sm header-vip-btn">นัดชม VIP</a>
-        <button type="button" id="mobileMenuBtn" class="mobile-menu-btn" aria-label="เปิดเมนู" aria-expanded="false">☰</button>
+        <div class="header-actions">
+          <a href="#catalogSection" id="headerSearchBtn" class="header-icon-btn" title="ค้นหาแบบบ้าน" aria-label="ค้นหาแบบบ้าน">
+            <span aria-hidden="true">🔍</span>
+            <span class="header-action-label">ค้นหา</span>
+          </a>
+          <a href="tel:028899900" class="header-tel-btn" title="โทรสำนักงานขาย 02-889-9900" aria-label="โทร 02-889-9900">
+            <span aria-hidden="true">📞</span>
+            <span class="tel-number">02-889-9900</span>
+          </a>
+          <button type="button" id="openAdminCmsBtn" class="btn btn-outline btn-sm desktop-admin-btn" title="สำหรับเจ้าหน้าที่ฝ่ายขาย">
+            สำหรับฝ่ายขาย
+          </button>
+          <a href="#bookingSection" class="btn btn-gold btn-sm header-vip-btn">นัดชม VIP</a>
+          <button type="button" id="mobileMenuBtn" class="mobile-menu-btn" aria-label="เปิดเมนู" aria-expanded="false">☰</button>
+        </div>
       </div>
     </div>
   </header>
 
   <main id="top">
-    <!-- 1. Hero Showcase -->
-    <section class="hero-section">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">TURNKEY LUXURY BUILT-IN RESIDENCE</span>
-          <h1 class="hero-title">
-            ความสมบูรณ์แบบที่พร้อมให้คุณ<br>
-            <span class="gold-accent">“หิ้วกระเป๋าเข้าอยู่ได้ทันที”</span>
-          </h1>
-          <p class="hero-lead">
-            บ้านเดี่ยวโครงการส่วนตัวเพียง 28 ครอบครัว รังสรรค์งานอินทีเรียบิ้วอินครบทั้งหลังด้วยวัสดุเกรดพรีเมียมปลอดสารพิษ
-            ไม่ต้องเสียเวลาคุมช่างตกแต่งเองอีกครึ่งปีและไม่เสี่ยงงบบานปลาย บนทำเลศักยภาพ <strong>วัชรพล – ด่านจตุโชติ</strong>
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="#catalogSection" class="btn btn-gold">ชมคอลเลกชันบ้านพร้อมอยู่ (8.9 – 19.5 ล้าน)</a>
-            <a href="#craftSection" class="btn btn-outline">เทียบความต่างงานบิ้วอินจริง</a>
-          </div>
-
-          <div class="hero-metrics">
-            <div>
-              <span class="metric-value">8.9 – 19.5 ลบ.</span>
-              <span class="metric-label">ราคาสุทธิรวมบิ้วอินทั้งหลัง</span>
-            </div>
-            <div>
-              <span class="metric-value">สูงสุด 3.8 ลบ.</span>
-              <span class="metric-label">มูลค่าเฟอร์นิเจอร์บิ้วอินที่ได้รับ</span>
-            </div>
-            <div>
-              <span class="metric-value">เพียง 28 ยูนิต</span>
-              <span class="metric-label">สังคมส่วนตัว สายไฟลงดินทั้งโครงการ</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-visual-card">
-          <img src="assets/images/villa_celeste_hero.jpg" alt="HAVEN LUXE ESTATE บ้านเดี่ยวหรูตกแต่งบิ้วอินครบพร้อมเข้าอยู่" fetchpriority="high">
-          <div class="hero-floating-badge">
-            <div>
-              <strong>✦ Villa Celeste — โถงสูง Double Volume 6.2 เมตร</strong>
-              <span>ตกแต่งบิ้วอินหิน Sintered Stone &amp; Champagne Gold พร้อมเข้าอยู่</span>
-            </div>
-            <a href="#bookingSection" class="btn btn-gold btn-sm">นัดชมบ้านจริง</a>
-          </div>
-        </div>
+    <!-- 1. Full-Bleed Panoramic Cover Image Stage (Full Width 100% Left to Right) -->
+    <section class="hero-cover-section" id="heroCoverStage">
+      <div class="hero-cover-frame">
+        <img
+          src="assets/images/cover_background_1_page.jpg"
+          alt="HAVEN LUXE ESTATE คฤหาสน์หรูระดับเวิลด์คลาส พร้อมตกแต่งบิ้วอินครบทั้งหลัง"
+          class="hero-cover-img"
+          fetchpriority="high"
+        >
       </div>
     </section>
 
-    <!-- 2. Interactive Before / After Built-in Comparison -->
-    <section id="craftSection" class="craft-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">BESPOKE INTERIOR CRAFTSMANSHIP</span>
-          <h2 class="section-title">ทำไมต้องซื้อบ้านเปล่า แล้วเหนื่อยคุมช่างเองอีก 6–8 เดือน?</h2>
-          <p class="section-subtitle">
-            เลื่อนสไลเดอร์ด้านล่างเพื่อสัมผัสความแตกต่างระหว่างบ้านส่งมอบมาตรฐานทั่วไป กับบ้านตกแต่งบิ้วอินพร้อมเข้าอยู่จากทีมอินทีเรียมืออาชีพของ HAVEN LUXE ESTATE
-          </p>
+    <!-- 2. Hero Headline Stage (Clean & Elegant as in Request change2.pdf Page 1) -->
+    <section class="hero-intro-section" id="heroIntroSection">
+      <div class="container hero-intro-container">
+        <h1 class="hero-title">
+          <span class="hero-title-line"><span class="phrase-block">ความสมบูรณ์แบบ</span><span class="phrase-block">ที่รังสรรค์ไว้</span></span>
+          <span class="hero-title-line hero-title-highlight"><span class="phrase-block">เพื่อวันเริ่มต้นชีวิต</span><span class="phrase-block">ที่ไม่ต้องรอ</span></span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- 3. Luxury Built-in Architectural Gallery (Option 2: Edge-to-Edge Full Width) -->
+    <section id="craftSection" class="gallery-section">
+      <div class="gallery-container">
+        <div class="gallery-header">
+          <h2 class="gallery-title-th">บิ้วอินหรูโดยผู้เชี่ยวชาญ / รังสรรค์ตกแต่งภายในพรีเมียมครบทั้งหลังโดยทีมมืออาชีพ</h2>
+          <p class="gallery-title-en">Bespoke Built-In Specialist / Premium custom interiors, fully decorated by our expert team</p>
+          <div class="gallery-tag-wrap">
+            <span class="gallery-pill-tag">แกลเลอรี</span>
+          </div>
         </div>
 
-        <div class="craft-grid">
-          <div id="builtinCompareWidget" class="compare-wrapper">
-            <img src="assets/images/builtin_before_shell.jpg" alt="สภาพบ้านเปล่าก่อนตกแต่งบิ้วอิน" class="compare-img" loading="lazy">
-            <div class="compare-after-layer">
-              <img src="assets/images/builtin_after_luxury.jpg" alt="สภาพห้องรับแขกหลังตกแต่งบิ้วอิน Warm Luxury พร้อมเข้าอยู่" class="compare-img" loading="lazy">
-            </div>
-            <span class="compare-tag compare-tag-after">✦ บ้านบิ้วอินพร้อมเข้าอยู่ (HAVEN LUXE)</span>
-            <span class="compare-tag compare-tag-before">บ้านเปล่าทั่วไป</span>
-            <div class="compare-divider" aria-hidden="true">
-              <div class="compare-knob">↔</div>
-            </div>
-            <input
-              type="range"
-              id="builtinCompareRange"
-              class="compare-range-input"
-              min="5"
-              max="95"
-              value="54"
-              aria-label="เลื่อนเพื่อเปรียบเทียบบ้านเปล่ากับบ้านตกแต่งบิ้วอินพร้อมอยู่"
-            >
+        <div class="gallery-grid" id="luxuryGalleryGrid">
+          <div class="gallery-card" data-gallery-index="1">
+            <img src="assets/images/gallery_01.jpg" alt="HAVEN LUXE สถาปัตยกรรมภายนอกและงานบิ้วอินหรู" loading="lazy">
           </div>
-
-          <div class="craft-pillars">
-            <div class="craft-card">
-              <h3>1. วัสดุไม้กันชื้น HMR เกรด E1 ปลอดสารระเหย</h3>
-              <p>ปลอดภัยต่อเด็กเล็กและผู้สูงอายุ ไม่มีกลิ่นฉุนฟอร์มาลดีไฮด์ เข้าอยู่วันแรกได้อย่างสบายใจ</p>
-            </div>
-            <div class="craft-card">
-              <h3>2. หิน Sintered Stone &amp; Quartz แท้ ทนรอยและคราบ</h3>
-              <p>กรุผนังโถงรับแขกและท็อปเคาน์เตอร์ครัวด้วยหินเกรดนำเข้า พร้อมคิ้วสแตนเลสสีทองแชมเปญไร้รอยต่อ</p>
-            </div>
-            <div class="craft-card">
-              <h3>3. กู้ซื้อรวมในวงเงินสินเชื่อบ้านดอกเบี้ยต่ำได้ทันที</h3>
-              <p>ไม่ต้องควักเงินสดก้อนโต 2–4 ล้านบาทไปจ้างผู้รับเหมาแยก ผ่อนรวมในเรตดอกเบี้ยบ้านสุดคุ้ม</p>
-            </div>
-            <div class="craft-card">
-              <h3>4. รับประกันงานบิ้วอินและระบบไฟซ่อนนาน 3 ปีเต็ม</h3>
-              <p>ดูแลโดยทีมวิศวกรและช่างฝีมือประจำโครงการ มีแบบ As-Built ชัดเจน เซอร์วิสถึงบ้านรวดเร็ว</p>
-            </div>
+          <div class="gallery-card" data-gallery-index="2">
+            <img src="assets/images/gallery_02.jpg" alt="HAVEN LUXE สถาปัตยกรรมภายนอกและงานบิ้วอินหรู" loading="lazy">
+          </div>
+          <div class="gallery-card" data-gallery-index="3">
+            <img src="assets/images/gallery_03.jpg" alt="HAVEN LUXE สถาปัตยกรรมภายนอกและงานบิ้วอินหรู" loading="lazy">
+          </div>
+          <div class="gallery-card" data-gallery-index="4">
+            <img src="assets/images/gallery_04.jpg" alt="HAVEN LUXE สถาปัตยกรรมภายนอกและงานบิ้วอินหรู" loading="lazy">
+          </div>
+          <div class="gallery-card" data-gallery-index="5">
+            <img src="assets/images/gallery_05.jpg" alt="HAVEN LUXE สถาปัตยกรรมภายนอกและงานบิ้วอินหรู" loading="lazy">
+          </div>
+          <div class="gallery-card" data-gallery-index="6">
+            <img src="assets/images/gallery_06.jpg" alt="HAVEN LUXE สถาปัตยกรรมภายนอกและงานบิ้วอินหรู" loading="lazy">
+          </div>
+          <div class="gallery-card" data-gallery-index="7">
+            <img src="assets/images/gallery_07.jpg" alt="HAVEN LUXE สถาปัตยกรรมภายนอกและงานบิ้วอินหรู" loading="lazy">
+          </div>
+          <div class="gallery-card" data-gallery-index="8">
+            <img src="assets/images/gallery_08.jpg" alt="HAVEN LUXE สถาปัตยกรรมภายนอกและงานบิ้วอินหรู" loading="lazy">
           </div>
         </div>
       </div>
@@ -176,7 +149,7 @@
       <div class="container">
         <div class="section-header">
           <span class="eyebrow">EXCLUSIVE COLLECTION</span>
-          <h2 class="section-title">คอลเลกชันแบบบ้านและแปลงพิเศษ (8.9 – 19.5 ล้านบาท)</h2>
+          <h2 class="section-title">คอลเลกชันแบบบ้านและแปลงพิเศษ</h2>
           <p class="section-subtitle">
             เลือกชมสเปกงานบิ้วอินรายห้องและแปลนบ้าน ชั้น 1 – ชั้น 2 ของแต่ละแปลง พร้อมสถานะอัปเดตล่าสุดจากฝ่ายขาย
           </p>
@@ -191,7 +164,7 @@
           <div class="filter-field">
             <label for="filterBudgetSelect">ช่วงงบประมาณ</label>
             <select id="filterBudgetSelect">
-              <option value="all">ทุกช่วงราคา (8.9 – 19.5 ล้าน)</option>
+              <option value="all">ทุกช่วงราคา</option>
               <option value="8-12">8 – 12 ล้านบาท</option>
               <option value="12-16">12 – 16 ล้านบาท</option>
               <option value="16-20">16 – 20 ล้านบาท</option>
@@ -293,8 +266,8 @@
 
           <div class="calc-summary-card">
             <div>
-              <span style="font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-light);">ESTIMATED MONTHLY INSTALLMENT</span>
-              <div style="font-size:0.95rem;color:#E2DBD3;margin-top:6px;">ยอดผ่อนชำระต่อเดือนโดยประมาณ</div>
+              <span class="calc-card-eyebrow">ESTIMATED MONTHLY INSTALLMENT</span>
+              <div class="calc-card-sublabel">ยอดผ่อนชำระต่อเดือนโดยประมาณ</div>
               <div id="calcMonthlyResult" class="monthly-pay-number">33,555 บาท/เดือน</div>
 
               <div class="calc-breakdown">
@@ -314,7 +287,7 @@
             </div>
 
             <div>
-              <p style="font-size:0.8rem;color:#BFB5AA;margin:0 0 16px;">
+              <p class="calc-card-disclaimer">
                 * ประมาณการเบื้องต้นเท่านั้น ทั้งนี้ตามเกณฑ์ LTV ธปท. บ้านราคาต่ำกว่า 10 ล้านบาทกู้ได้สูงสุด 100% (สัญญาแรก) และบ้านราคาตั้งแต่ 10 ล้านบาทขึ้นไปกู้ได้สูงสุด 90% (ดาวน์ขั้นต่ำ 10%) ขึ้นอยู่กับเงื่อนไขของแต่ละธนาคาร
               </p>
               <button type="button" id="calcToBookingBtn" class="btn btn-gold" style="width:100%;">
@@ -331,7 +304,7 @@
       <div class="container">
         <div class="section-header">
           <span class="eyebrow">PRIME CONNECTIVITY</span>
-          <h2 class="section-title">ทำเลศักยภาพ วัชรพล – ด่านจตุโชติ เชื่อมต่อใจกลางเมืองในไม่กี่นาที</h2>
+          <h2 class="section-title location-section-title">ทำเลศักยภาพ เชื่อมต่อใจกลางเมืองในไม่กี่นาที</h2>
           <p class="section-subtitle">
             รายล้อมด้วยทางด่วนสายหลัก โรงเรียนนานาชาติชั้นนำ โรงพยาบาลเอกชน และไลฟ์สไตล์มอลล์ระดับพรีเมียม
           </p>
@@ -391,9 +364,9 @@
         <div class="booking-wrapper">
           <div class="booking-privilege-panel">
             <div>
-              <span class="eyebrow" style="background:rgba(223,196,150,0.15);color:var(--gold-light);border-color:rgba(223,196,150,0.35);">PRIVATE VIEWING BY APPOINTMENT</span>
-              <h2 style="font-size:1.85rem;margin:8px 0 12px;line-height:1.3;">นัดหมายเข้าชมบ้านจริงแบบส่วนตัว (VIP Exclusive)</h2>
-              <p style="color:#D8CFC4;margin:0;">
+              <span class="eyebrow" style="background:#E0F2FE;color:#0284C7;border-color:#BAE6FD;">PRIVATE VIEWING BY APPOINTMENT</span>
+              <h2 style="font-size:1.85rem;margin:8px 0 12px;line-height:1.3;color:#0F172A;">นัดหมายเข้าชมบ้านจริงแบบส่วนตัว (VIP Exclusive)</h2>
+              <p style="color:#64748B;margin:0;">
                 เพื่อให้ทุกครอบครัวได้รับความเป็นส่วนตัวสูงสุดในการเดินชมรายละเอียดงานบิ้วอินทุกห้อง ทางโครงการขอเรียนเชิญลงทะเบียนนัดหมายล่วงหน้า
               </p>
 
@@ -404,8 +377,8 @@
               </ul>
             </div>
 
-            <div style="border-top:1px solid rgba(223,196,150,0.25);padding-top:20px;">
-              <div style="font-size:0.85rem;color:var(--gold-light);font-weight:600;">ติดต่อสำนักงานขายโดยตรง (เปิดบริการทุกวัน 09:30 – 18:30 น.)</div>
+            <div style="border-top:1px solid #E2E8F0;padding-top:20px;">
+              <div style="font-size:0.85rem;color:#0284C7;font-weight:600;">ติดต่อสำนักงานขายโดยตรง (เปิดบริการทุกวัน 09:30 – 18:30 น.)</div>
               <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
                 <a href="tel:028899900" class="btn btn-gold btn-sm">📞 โทร 02-889-9900</a>
                 <button type="button" class="btn btn-outline btn-sm" data-action="copy-line">💬 ทัก LINE @havenluxe.estate</button>
@@ -506,6 +479,18 @@
     </div>
   </div>
 
+  <!-- Gallery Photo Lightbox Modal -->
+  <div id="galleryLightboxModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="ภาพถ่ายผลงานบิ้วอิน" hidden>
+    <div class="modal-dialog" style="max-width:960px;background:transparent;box-shadow:none;border:none;">
+      <div style="position:relative;text-align:right;margin-bottom:8px;">
+        <button type="button" id="closeGalleryLightboxBtn" class="modal-close-btn" style="background:#0F172A;color:#FFFFFF;border-radius:50%;width:38px;height:38px;font-size:1.2rem;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;" aria-label="ปิดภาพขยาย">✕</button>
+      </div>
+      <div style="border-radius:12px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.5);background:#000;">
+        <img id="galleryLightboxImg" src="" alt="ภาพขยายผลงานบิ้วอินหรู" style="width:100%;height:auto;max-height:85vh;object-fit:contain;display:block;">
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
@@ -513,7 +498,7 @@
         <strong style="color:var(--gold-light);font-family:var(--font-serif);font-size:1.15rem;letter-spacing:0.06em;">HAVEN LUXE ESTATE</strong>
         <div style="margin-top:4px;">โครงการบ้านเดี่ยวหรู ตกแต่งบิ้วอินครบพร้อมเข้าอยู่ • ทำเลวัชรพล – ด่านจตุโชติ • โทร 02-889-9900</div>
       </div>
-      <div style="font-size:0.82rem;color:#A89F95;">
+      <div style="font-size:0.82rem;color:#64748B;">
         © 2026 HAVEN LUXE ESTATE. ภาพจำลองและรายละเอียดวัสดุเป็นไปตามมาตรฐานแต่ละแปลงของโครงการ
       </div>
     </div>
@@ -527,13 +512,13 @@
   </div>
 
   <!-- Offline-Compatible Script Wiring (Global Namespace, Cache Busted) -->
-  <script src="assets/js/initial_data.js?v=20261108_haven_luxe_v1"></script>
-  <script src="assets/js/api_client.js?v=20261108_haven_luxe_v1"></script>
-  <script src="assets/js/property_catalog.js?v=20261108_haven_luxe_v1"></script>
-  <script src="assets/js/mortgage_calculator.js?v=20261108_haven_luxe_v1"></script>
-  <script src="assets/js/lead_manager.js?v=20261108_haven_luxe_v1"></script>
-  <script src="assets/js/admin_cms.js?v=20261108_haven_luxe_v1"></script>
-  <script src="assets/js/app.js?v=20261108_haven_luxe_v1"></script>
+  <script src="assets/js/initial_data.js?v=20261108_v1_3_0"></script>
+  <script src="assets/js/api_client.js?v=20261108_v1_3_0"></script>
+  <script src="assets/js/property_catalog.js?v=20261108_v1_3_0"></script>
+  <script src="assets/js/mortgage_calculator.js?v=20261108_v1_3_0"></script>
+  <script src="assets/js/lead_manager.js?v=20261108_v1_3_0"></script>
+  <script src="assets/js/admin_cms.js?v=20261108_v1_3_0"></script>
+  <script src="assets/js/app.js?v=20261108_v1_3_0"></script>
 </body>
 </html>
 

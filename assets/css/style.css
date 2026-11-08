@@ -1,49 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
 /* ==========================================================================
-   HAVEN LUXE ESTATE — Warm Luxury Stylesheet (Offline 100%, Zero CDN)
-   Palette: Soft Ivory (#FAF7F2), Pure Cream (#FFFFFF), Champagne Gold (#B8965A),
-            Deep Warm Espresso (#241F1C)
+   HAVEN LUXE ESTATE — Modern Pure White & Sky Cyan Stylesheet
+   Palette: Pure Crisp White (#FFFFFF), Light Slate Tint (#F8FAFC), 
+            Deep Charcoal Black (#0F172A), Vibrant Sky Blue / Cyan (#0284C7, #0EA5E9, #38BDF8)
    ========================================================================== */
 
 :root {
-  --bg-ivory: #FAF7F2;
-  --bg-cream-alt: #F3ECE1;
+  --bg-ivory: #FFFFFF;
+  --bg-cream-alt: #F8FAFC;
   --bg-card: #FFFFFF;
-  --bg-espresso: #241F1C;
-  --bg-espresso-soft: #312A26;
+  --bg-espresso: #0F172A;
+  --bg-espresso-soft: #1E293B;
 
-  --gold-primary: #B8965A;
-  --gold-deep: #8F6D36;
-  --gold-light: #DFC496;
-  --gold-tint: #F8F2E7;
+  --gold-primary: #0284C7;
+  --gold-deep: #0369A1;
+  --gold-light: #38BDF8;
+  --gold-tint: #F0F9FF;
 
-  --border-champagne: #E5DAC8;
-  --border-strong: #D2C2A8;
+  --border-champagne: #E2E8F0;
+  --border-strong: #CBD5E1;
 
-  --text-primary: #241F1C;
-  --text-secondary: #5E554E;
-  --text-muted: #857B73;
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
 
-  --status-avail-bg: #E7F3EC;
-  --status-avail-text: #1B5E40;
-  --status-resv-bg: #FCF0DC;
-  --status-resv-text: #8F5B0D;
-  --status-sold-bg: #EDE9E3;
-  --status-sold-text: #655C55;
+  --status-avail-bg: #ECFDF5;
+  --status-avail-text: #065F46;
+  --status-resv-bg: #EFF6FF;
+  --status-resv-text: #1E40AF;
+  --status-sold-bg: #F1F5F9;
+  --status-sold-text: #475569;
 
-  --danger-bg: #FDF0EF;
-  --danger-text: #B42318;
-  --success-bg: #E7F3EC;
-  --success-text: #1B5E40;
+  --danger-bg: #FEF2F2;
+  --danger-text: #B91C1C;
+  --success-bg: #ECFDF5;
+  --success-text: #065F46;
 
   --radius-sm: 8px;
   --radius-md: 14px;
-  --radius-lg: 22px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
 
-  --shadow-soft: 0 10px 30px rgba(36, 31, 28, 0.06);
-  --shadow-elevated: 0 20px 48px rgba(36, 31, 28, 0.12);
+  --shadow-soft: 0 10px 30px rgba(31, 26, 23, 0.05);
+  --shadow-elevated: 0 20px 48px rgba(31, 26, 23, 0.10);
+  --shadow-grand: 0 24px 64px rgba(31, 26, 23, 0.14);
 
   --font-serif: 'Cormorant Garamond', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
-  --font-sans: 'Prompt', 'Noto Sans Thai', 'Segoe UI', 'Leelawadee UI', Tahoma, sans-serif;
+  --font-sans: 'Prompt', 'Noto Sans Thai', 'Sukhumvit Set', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Leelawadee UI', Tahoma, sans-serif;
 }
 
 *,
@@ -114,16 +118,26 @@ textarea {
 
 .section-header {
   text-align: center;
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto 44px;
 }
 
 .section-title {
-  font-size: clamp(1.75rem, 3vw, 2.45rem);
+  font-size: clamp(1.68rem, 2.7vw, 2.35rem);
   font-weight: 700;
   color: var(--text-primary);
   margin: 0 0 12px;
-  line-height: 1.3;
+  line-height: 1.32;
+}
+
+.location-section-title {
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .location-section-title {
+    white-space: normal;
+  }
 }
 
 .section-subtitle {
@@ -149,14 +163,15 @@ textarea {
 }
 
 .btn-gold {
-  background: linear-gradient(135deg, #C3A166 0%, #9E7B42 100%);
+  background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
   color: #FFFFFF;
-  box-shadow: 0 6px 18px rgba(158, 123, 66, 0.28);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.28);
 }
 
 .btn-gold:hover {
-  background: linear-gradient(135deg, #B38F52 0%, #896832 100%);
+  background: linear-gradient(135deg, #38BDF8 0%, #0369A1 100%);
   transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.36);
 }
 
 .btn-outline {
@@ -168,16 +183,25 @@ textarea {
 .btn-outline:hover {
   border-color: var(--gold-deep);
   background: var(--gold-tint);
+  color: var(--gold-deep);
 }
 
-.btn-dark {
-  background: var(--bg-espresso);
-  color: var(--gold-light);
-  border-color: var(--bg-espresso);
+.btn-dark,
+a.btn-dark {
+  background: #E0F2FE;
+  background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%);
+  color: #0F172A;
+  border: 1.5px solid #7DD3FC;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.12);
 }
 
-.btn-dark:hover {
-  background: #38302B;
+.btn-dark:hover,
+a.btn-dark:hover {
+  background: linear-gradient(135deg, #BAE6FD 0%, #7DD3FC 100%);
+  border-color: #0284C7;
+  color: #000000;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.22);
 }
 
 .btn-sm {
@@ -185,14 +209,16 @@ textarea {
   font-size: 0.86rem;
 }
 
-/* Header & Navigation */
+/* Header & Navigation (Sansiri Minimalist Ultra-Clean) */
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 90;
-  background: rgba(250, 247, 242, 0.94);
-  backdrop-filter: blur(12px);
+  z-index: 95;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-champagne);
+  transition: all 0.25s ease;
 }
 
 .header-inner {
@@ -203,34 +229,60 @@ textarea {
   gap: 16px;
 }
 
+.header-inner.header-fluid {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 clamp(20px, 3.5vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 78px;
+  gap: 20px;
+}
+
+.header-right-group {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-left: auto;
+}
+
 .brand-logo {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
+  flex: 0 0 auto;
 }
 
 .brand-crest {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 10px;
   background: var(--bg-espresso);
-  border: 1px solid var(--gold-primary);
+  border: 1.5px solid var(--gold-light);
   color: var(--gold-light);
   font-family: var(--font-serif);
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.18);
   flex-shrink: 0;
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .brand-text-en {
   display: block;
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-family: var(--font-sans);
+  font-size: 1.18rem;
+  font-weight: 600;
+  letter-spacing: 0.10em;
   color: var(--text-primary);
   line-height: 1.15;
 }
@@ -239,23 +291,34 @@ textarea {
   display: block;
   font-size: 0.76rem;
   color: var(--text-secondary);
+  font-weight: 400;
+  margin-top: 2px;
 }
 
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 26px;
+  justify-content: center;
+  gap: 24px;
+  margin: 0;
 }
 
-.main-nav a {
-  font-size: 0.93rem;
+.nav-link {
+  position: relative;
+  font-size: 0.94rem;
   font-weight: 500;
   color: var(--text-secondary);
-  transition: color 0.2s ease;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  text-decoration: none;
 }
 
-.main-nav a:hover {
-  color: var(--gold-deep);
+.nav-link:hover {
+  color: #0284C7;
+  background: #E0F2FE;
+  box-shadow: 0 2px 10px rgba(2, 132, 199, 0.14);
 }
 
 .mobile-admin-link,
@@ -267,6 +330,45 @@ textarea {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
+}
+
+.header-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-champagne);
+  transition: all 0.2s ease;
+}
+
+.header-icon-btn:hover {
+  border-color: var(--gold-primary);
+  background: var(--gold-tint);
+  color: var(--gold-deep);
+}
+
+.header-tel-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.header-tel-btn:hover {
+  color: var(--gold-deep);
 }
 
 .mobile-menu-btn {
@@ -277,6 +379,8 @@ textarea {
   padding: 8px 12px;
   cursor: pointer;
   color: var(--text-primary);
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 /* Offline / Standalone Notice Pill */
@@ -289,106 +393,431 @@ textarea {
   padding: 6px 16px;
 }
 
-/* Hero Section */
-.hero-section {
-  padding: 56px 0 72px;
-  background: radial-gradient(circle at top right, #F4EBDD 0%, #FAF7F2 62%);
+/* ==========================================================================
+   1. Full-Bleed Panoramic Cover Image Stage (Sansiri Edge-to-Edge)
+   ========================================================================== */
+.hero-cover-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #0B132B;
+  position: relative;
+  line-height: 0;
+}
+
+.hero-cover-frame {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  display: block;
+}
+
+.hero-cover-img {
+  width: 100%;
+  height: auto;
+  max-height: 720px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.hero-cover-section:hover .hero-cover-img {
+  transform: scale(1.012);
+}
+
+/* ==========================================================================
+   2. Hero Headline, Lead & Call to Action (Centered Typography)
+   ========================================================================== */
+.hero-intro-section {
+  padding: clamp(36px, 4.5vw, 56px) 24px clamp(36px, 4.5vw, 56px);
+  background: #FFFFFF;
+  text-align: center;
+  position: relative;
   border-bottom: 1px solid var(--border-champagne);
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 48px;
+.hero-intro-container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .hero-title {
-  font-size: clamp(2rem, 3.8vw, 3.1rem);
-  line-height: 1.22;
-  margin: 0 0 18px;
+  font-family: var(--font-sans);
+  font-size: clamp(2.1rem, 3.8vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.32;
+  letter-spacing: -0.015em;
   color: var(--text-primary);
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.hero-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero-title-line.hero-title-highlight {
+  color: #0284C7;
   font-weight: 700;
 }
 
-.hero-title .gold-accent {
-  color: var(--gold-deep);
+.phrase-block {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .hero-lead {
-  font-size: 1.08rem;
+  font-size: clamp(1.02rem, 1.25vw, 1.15rem);
   color: var(--text-secondary);
-  margin: 0 0 28px;
+  line-height: 1.82;
+  max-width: 840px;
+  margin: 0 auto 36px;
+  text-align: center;
 }
 
 .hero-cta-group {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 34px;
-}
-
-.hero-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border-champagne);
+  margin: 0 auto;
 }
 
-.metric-value {
-  display: block;
-  font-size: 1.35rem;
-  font-weight: 700;
+/* ==========================================================================
+   3. Panoramic Luxury Metrics Section
+   ========================================================================== */
+.hero-metrics-section {
+  background: #F8FAFC;
+  border-top: 1px solid var(--border-champagne);
+  border-bottom: 1px solid var(--border-champagne);
+  padding: 32px 0;
+}
+
+/* Grand Cinematic Visual Stage (Sansiri Luxury Wide Stage) */
+.hero-grand-stage {
+  margin: 36px auto 0;
+  max-width: 1360px;
+}
+
+.hero-villa-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.hero-villa-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--bg-card);
+  border: 1px solid var(--border-champagne);
+  color: var(--text-secondary);
+  transition: all 0.22s ease;
+}
+
+.hero-villa-pill .pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border-strong);
+  transition: background 0.2s ease;
+}
+
+.hero-villa-pill:hover {
+  border-color: var(--gold-primary);
   color: var(--gold-deep);
 }
 
-.metric-label {
-  font-size: 0.84rem;
-  color: var(--text-secondary);
+.hero-villa-pill.active {
+  background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%);
+  border-color: #38BDF8;
+  color: #0F172A;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.2);
 }
 
-.hero-visual-card {
+.hero-villa-pill.active .pill-dot {
+  background: #0284C7;
+}
+
+.hero-cinematic-frame {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: var(--bg-card);
-  border: 1px solid var(--border-champagne);
   box-shadow: var(--shadow-elevated);
+  border: 1px solid var(--border-champagne);
+  background: #F1F5F9;
+  aspect-ratio: 21 / 10;
+  max-height: 580px;
 }
 
-.hero-visual-card img {
+.hero-cinematic-frame img {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
   object-fit: cover;
+  transition: opacity 0.35s ease, transform 0.6s ease;
 }
 
-.hero-floating-badge {
+.hero-cinematic-frame:hover img {
+  transform: scale(1.015);
+}
+
+.hero-cinematic-overlay-vignette {
   position: absolute;
-  bottom: 18px;
-  left: 18px;
-  right: 18px;
-  background: rgba(36, 31, 28, 0.9);
-  backdrop-filter: blur(8px);
-  color: #FFFFFF;
-  padding: 14px 18px;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(223, 196, 150, 0.4);
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0) 40%, rgba(15, 23, 42, 0.12) 100%);
+}
+
+/* Architectural Showcase Info Strip (Sansiri Luxury Clean Showcase Bar - Zero Overlay on Photo) */
+.hero-villa-showcase-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-champagne);
+  border-radius: var(--radius-lg);
+  padding: 18px 28px;
+  box-shadow: var(--shadow-soft);
+  margin-top: 14px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.25s ease;
 }
 
-.hero-floating-badge strong {
-  color: var(--gold-light);
+.showcase-meta-group {
+  flex: 1 1 auto;
+}
+
+.capsule-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.capsule-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.capsule-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+.showcase-pricing-group {
+  flex: 0 0 auto;
+  text-align: right;
+  padding: 0 24px;
+  border-left: 1px solid var(--border-champagne);
+  border-right: 1px solid var(--border-champagne);
+}
+
+.showcase-price {
+  font-family: var(--font-sans);
+  font-size: 1.42rem;
+  font-weight: 700;
+  color: var(--gold-deep);
+  line-height: 1.2;
+}
+
+.showcase-builtin {
+  font-size: 0.8rem;
+  color: var(--status-avail-text);
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.showcase-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+/* Panoramic Luxury Metrics Ribbon */
+.hero-metrics-panoramic {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: var(--bg-card);
+  padding: 24px 32px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-champagne);
+  box-shadow: var(--shadow-soft);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.metric-block {
+  text-align: center;
+  position: relative;
+}
+
+.metric-block:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  right: 0;
+  width: 1px;
+  background: var(--border-champagne);
+}
+
+.metric-block .metric-value {
   display: block;
-  font-size: 0.96rem;
+  font-family: var(--font-sans);
+  font-size: 1.48rem;
+  font-weight: 700;
+  color: var(--gold-deep);
+  line-height: 1.2;
 }
 
-.hero-floating-badge span {
-  font-size: 0.82rem;
-  color: #E2DBD3;
+.metric-block .metric-label {
+  display: block;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   Luxury Built-in Architectural Gallery Section (Option 2: Edge-to-Edge Full Width)
+   ========================================================================== */
+.gallery-section {
+  padding: clamp(32px, 3.5vw, 48px) 0 clamp(40px, 4.5vw, 60px);
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border-champagne);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.gallery-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 clamp(12px, 1.6vw, 28px);
+  box-sizing: border-box;
+}
+
+.gallery-header {
+  text-align: center;
+  max-width: 1440px;
+  margin: 0 auto clamp(18px, 2.2vw, 28px);
+  padding: 0 16px;
+}
+
+.gallery-title-th {
+  font-family: var(--font-sans);
+  font-size: clamp(1.22rem, 1.9vw, 1.92rem);
+  font-weight: 600;
+  color: #0F172A;
+  line-height: 1.4;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 1080px) {
+  .gallery-title-th {
+    white-space: nowrap;
+  }
+}
+
+.gallery-title-en {
+  font-family: var(--font-sans);
+  font-size: clamp(0.94rem, 1.2vw, 1.12rem);
+  font-weight: 400;
+  color: #64748B;
+  line-height: 1.55;
+  margin: 0 0 16px;
+}
+
+.gallery-tag-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-pill-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0F172A;
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  border-radius: 999px;
+  padding: 5px 22px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(10px, 1.2vw, 18px);
+  width: 100%;
+}
+
+.gallery-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10.5;
+  background: #F1F5F9;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px) scale(1.018);
+  box-shadow: 0 14px 32px rgba(2, 132, 199, 0.20);
+  border-color: #38BDF8;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
 }
 
 /* Before / After Built-in Comparison Section */
@@ -412,7 +841,7 @@ textarea {
   border: 1px solid var(--border-strong);
   box-shadow: var(--shadow-soft);
   aspect-ratio: 16 / 10;
-  background: #EAE3D7;
+  background: #F1F5F9;
   user-select: none;
   --split: 54%;
 }
@@ -613,7 +1042,7 @@ textarea {
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: #EDE5D8;
+  background: #F1F5F9;
 }
 
 .card-media img {
@@ -844,43 +1273,71 @@ textarea {
 }
 
 .calc-summary-card {
-  background: var(--bg-espresso);
-  color: #FFFFFF;
+  background: linear-gradient(150deg, #FFFFFF 0%, #F8FAFC 40%, #EEF2F6 100%);
+  color: #0F172A;
   border-radius: var(--radius-lg);
   padding: 34px;
-  border: 1px solid var(--gold-primary);
+  border: 1px solid #CBD5E1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: var(--shadow-elevated);
+  box-shadow: 0 24px 50px -12px rgba(15, 23, 42, 0.12), 0 8px 24px -4px rgba(2, 132, 199, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.calc-card-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0284C7;
+  font-weight: 700;
+}
+
+.calc-card-sublabel {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-top: 6px;
+  font-weight: 500;
 }
 
 .monthly-pay-number {
   font-size: clamp(2rem, 3.5vw, 2.75rem);
   font-weight: 700;
-  color: var(--gold-light);
+  color: #0284C7;
   line-height: 1.15;
   margin: 8px 0 4px;
+  text-shadow: 0 2px 10px rgba(2, 132, 199, 0.15);
 }
 
 .calc-breakdown {
-  border-top: 1px solid rgba(223, 196, 150, 0.22);
-  border-bottom: 1px solid rgba(223, 196, 150, 0.22);
-  padding: 18px 0;
+  background: rgba(255, 255, 255, 0.90);
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 18px 20px;
   margin: 20px 0;
   display: grid;
   gap: 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.85);
 }
 
 .breakdown-row {
   display: flex;
   justify-content: space-between;
   font-size: 0.92rem;
-  color: #E2DBD3;
+  color: #64748B;
+  font-weight: 500;
 }
 
 .breakdown-row strong {
-  color: #FFFFFF;
+  color: #0F172A;
+  font-weight: 700;
+}
+
+.calc-card-disclaimer {
+  font-size: 0.8rem;
+  color: #64748B;
+  margin: 0 0 16px;
+  line-height: 1.5;
 }
 
 /* Location & Lifestyle Section */
@@ -953,53 +1410,106 @@ textarea {
 /* VIP Viewing Lead Form Section */
 .booking-section {
   padding: 80px 0;
-  background: linear-gradient(180deg, #FAF7F2 0%, #F2EAE0 100%);
+  background: #FFFFFF;
 }
 
 .booking-wrapper {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 40px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-elevated);
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 32px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .booking-privilege-panel {
-  background: var(--bg-espresso);
-  color: #FFFFFF;
+  background: linear-gradient(150deg, #FFFFFF 0%, #F8FAFC 40%, #EEF2F6 100%);
+  color: #0F172A;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: var(--radius-lg);
+  border: 1px solid #CBD5E1;
+  box-shadow: 0 24px 50px -12px rgba(15, 23, 42, 0.12), 0 8px 24px -4px rgba(2, 132, 199, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.booking-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0284C7;
+  font-weight: 700;
+  background: #E0F2FE;
+  border: 1px solid #BAE6FD;
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin-bottom: 8px;
+}
+
+.booking-privilege-title {
+  font-size: clamp(1.5rem, 2.2vw, 1.88rem);
+  font-weight: 700;
+  margin: 10px 0 12px;
+  line-height: 1.35;
+  color: #0F172A;
+  letter-spacing: -0.01em;
+}
+
+.booking-privilege-desc {
+  color: #64748B;
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.6;
 }
 
 .privilege-list {
   list-style: none;
   padding: 0;
-  margin: 24px 0;
+  margin: 26px 0;
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 
 .privilege-list li {
-  font-size: 0.93rem;
-  color: #EAE2D7;
-  padding-left: 24px;
+  font-size: 0.94rem;
+  color: #334155;
+  padding-left: 28px;
   position: relative;
+  line-height: 1.55;
+  font-weight: 500;
 }
 
 .privilege-list li::before {
   content: '✦';
   position: absolute;
   left: 0;
-  color: var(--gold-light);
+  top: 0;
+  color: #0284C7;
+  font-size: 1.05rem;
+}
+
+.booking-contact-direct {
+  border-top: 1px solid #E2E8F0;
+  padding-top: 22px;
+  margin-top: auto;
+}
+
+.booking-contact-label {
+  font-size: 0.88rem;
+  color: #0284C7;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .booking-form-panel {
+  background: #FFFFFF;
   padding: 40px;
+  border-radius: var(--radius-lg);
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 16px 40px -10px rgba(15, 23, 42, 0.06);
 }
 
 .form-grid-2 {
@@ -1136,9 +1646,10 @@ textarea {
 }
 
 .tab-btn.active {
-  background: var(--bg-espresso);
-  color: var(--gold-light);
-  border-color: var(--bg-espresso);
+  background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%);
+  color: #0F172A;
+  border-color: #38BDF8;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.15);
 }
 
 .builtin-spec-list {
@@ -1255,7 +1766,7 @@ textarea {
 /* Footer & Sticky Floating Contact Bar */
 .site-footer {
   background: var(--bg-espresso);
-  color: #D8CFC4;
+  color: #94A3B8;
   padding: 48px 0;
   font-size: 0.9rem;
 }
@@ -1274,15 +1785,16 @@ textarea {
   left: 50%;
   transform: translateX(-50%);
   z-index: 120;
-  background: rgba(36, 31, 28, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--gold-primary);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(14, 165, 233, 0.35);
   padding: 8px 14px;
   border-radius: 999px;
   display: flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
 }
 
 .floating-cta-bar a,
@@ -1292,57 +1804,42 @@ textarea {
 }
 
 /* Responsive Breakpoints */
-@media (max-width: 1024px) {
-  .hero-grid,
-  .craft-grid,
-  .calc-grid,
-  .booking-wrapper {
-    grid-template-columns: 1fr;
+@media (max-width: 1080px) {
+  .site-header {
+    background: rgba(255, 255, 255, 0.98);
   }
 
-  .filter-bar {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .location-grid,
-  .admin-kpi-row,
-  .admin-form-grid-4,
-  .admin-form-grid-3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
+  .header-inner,
+  .header-inner.header-fluid {
+    min-height: 64px;
     padding: 0 16px;
+    gap: 12px;
   }
 
-  .header-inner {
-    min-height: 60px;
-    gap: 8px;
+  .header-right-group {
+    gap: 10px;
   }
 
   .brand-logo {
-    gap: 8px;
+    gap: 10px;
   }
 
   .brand-crest {
-    width: 36px;
-    height: 36px;
-    font-size: 1.2rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1.25rem;
     border-radius: 8px;
   }
 
   .brand-text-en {
-    font-size: 1.05rem;
-    letter-spacing: 0.04em;
+    font-size: 1.1rem;
+    letter-spacing: 0.06em;
   }
 
   .brand-text-th {
-    display: none; /* Hide secondary tagline on mobile to keep header clean & prevent overflow */
+    display: none;
   }
 
-  /* Desktop Admin button is hidden on mobile, replaced by button in hamburger menu */
   #openAdminCmsBtn,
   .desktop-admin-btn {
     display: none !important;
@@ -1353,9 +1850,22 @@ textarea {
     flex-shrink: 0;
   }
 
+  .header-tel-btn .tel-number {
+    display: none;
+  }
+
+  .header-icon-btn .header-action-label {
+    display: none;
+  }
+
+  .header-icon-btn,
+  .header-tel-btn {
+    padding: 8px 10px;
+  }
+
   .header-vip-btn {
-    padding: 6px 12px;
-    font-size: 0.82rem;
+    padding: 7px 14px;
+    font-size: 0.85rem;
     white-space: nowrap;
   }
 
@@ -1413,70 +1923,167 @@ textarea {
     border-radius: var(--radius-sm);
   }
 
-  /* Hero Section */
-  .hero-section {
-    padding: 32px 0 44px;
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .craft-grid,
+  .calc-grid,
+  .booking-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-metrics-panoramic {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+    padding: 20px 24px;
+  }
+
+  .metric-block:nth-child(2)::after {
+    display: none;
+  }
+
+  .filter-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .location-grid,
+  .admin-kpi-row,
+  .admin-form-grid-4,
+  .admin-form-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .header-inner,
+  .header-inner.header-fluid {
+    min-height: 58px;
+    padding: 0 12px;
+    gap: 6px;
+  }
+
+  /* Full-bleed Cover for Mobile */
+  .hero-cover-img {
+    height: clamp(230px, 56vw, 360px);
+    object-position: center;
+  }
+
+  /* Hero Intro Section for Mobile */
+  .hero-intro-section {
+    padding: 30px 16px;
   }
 
   .hero-title {
-    font-size: clamp(1.65rem, 5.8vw, 2.15rem);
-    line-height: 1.25;
-    margin: 0 0 14px;
+    font-size: clamp(1.48rem, 5.2vw, 1.95rem);
+    line-height: 1.34;
+    margin: 0;
   }
 
-  .hero-lead {
-    font-size: 0.96rem;
-    line-height: 1.6;
-    margin: 0 0 20px;
-  }
-
-  .hero-cta-group {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-    margin-bottom: 24px;
-  }
-
-  .hero-cta-group .btn {
-    width: 100%;
+  .hero-title-line {
     white-space: normal;
-    text-align: center;
-    padding: 12px 18px;
-    line-height: 1.35;
-    font-size: 0.94rem;
   }
 
-  .hero-metrics {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding-top: 18px;
+  /* Luxury Built-in Gallery for Mobile */
+  .gallery-section {
+    padding: 44px 0 54px;
   }
 
-  .metric-value {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .gallery-title-th {
     font-size: 1.25rem;
+    line-height: 1.4;
   }
 
-  .metric-label {
-    font-size: 0.82rem;
+  .gallery-title-en {
+    font-size: 0.88rem;
+    line-height: 1.45;
   }
 
-  .hero-visual-card {
+  .hero-metrics-section {
+    padding: 20px 0;
+  }
+
+  .hero-metrics-panoramic {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .metric-block:not(:last-child)::after {
+    display: none;
+  }
+
+  /* Clean Uncluttered Architectural Frame on Mobile (Zero Text Overlays) */
+  .hero-cinematic-frame {
+    aspect-ratio: 16 / 10;
     border-radius: var(--radius-md);
   }
 
-  .hero-floating-badge {
-    position: static;
-    margin: 12px;
-    padding: 12px 14px;
+  /* Active Villa Showcase Bar for mobile (Cleanly situated beneath photo) */
+  .hero-villa-showcase-bar {
     flex-direction: column;
     align-items: stretch;
-    text-align: left;
-    gap: 10px;
+    padding: 16px 18px;
+    gap: 12px;
+    margin-top: 12px;
+    border-radius: var(--radius-md);
   }
 
-  .hero-floating-badge .btn {
+  .showcase-pricing-group {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--border-champagne);
+    border-bottom: 1px solid var(--border-champagne);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: left;
+  }
+
+  .showcase-actions-group {
+    flex-direction: column;
+    gap: 8px;
     width: 100%;
-    text-align: center;
+  }
+
+  .showcase-actions-group .btn {
+    width: 100%;
+  }
+
+  .hero-metrics-panoramic {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 18px 20px;
+    margin-top: 18px;
+  }
+
+  .metric-block:not(:last-child)::after {
+    display: none;
+  }
+
+  .hero-villa-nav {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 6px;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .hero-villa-pill {
+    flex-shrink: 0;
+    font-size: 0.82rem;
+    padding: 7px 14px;
   }
 
   /* Before/After Compare Slider */
@@ -1502,12 +2109,15 @@ textarea {
     padding: 4px 8px;
     top: 10px;
   }
+
   .compare-tag-after {
     left: 10px;
   }
+
   .compare-tag-before {
     right: 10px;
   }
+
   .compare-knob {
     width: 38px;
     height: 38px;
@@ -1572,27 +2182,31 @@ textarea {
   .header-inner {
     min-height: 56px;
   }
+
   .brand-crest {
     width: 32px;
     height: 32px;
     font-size: 1.1rem;
   }
+
   .brand-text-en {
     font-size: 0.95rem;
   }
+
   .header-vip-btn {
     padding: 5px 10px;
     font-size: 0.78rem;
   }
+
   .floating-cta-bar {
     width: calc(100% - 16px);
     padding: 5px 6px;
     gap: 4px;
   }
+
   .floating-cta-bar a,
   .floating-cta-bar button {
     font-size: 0.72rem;
     padding: 6px 8px;
   }
 }
-

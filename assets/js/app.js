@@ -221,6 +221,206 @@
     }
   }
 
+  var currentActiveHeroProperty = null;
+
+  function syncHeroVillaData(properties) {
+    var stage = document.getElementById('heroGrandStage');
+    if (!stage || !Array.isArray(properties) || properties.length === 0) return;
+
+    var pills = stage.querySelectorAll('.hero-villa-pill');
+    pills.forEach(function (pill) {
+      var plotCode = (pill.getAttribute('data-plot') || '').toUpperCase();
+      var villaId = Number(pill.getAttribute('data-villa-id'));
+      var match = null;
+
+      for (var i = 0; i < properties.length; i++) {
+        var p = properties[i];
+        if ((villaId && Number(p.id) === villaId) || (plotCode && String(p.plot_code).toUpperCase() === plotCode)) {
+          match = p;
+          break;
+        }
+      }
+
+      if (match) {
+        var mil = (Number(match.price_thb) / 1000000).toFixed(1).replace(/\.0$/, '');
+        var builtinMil = ((Number(match.builtin_value_thb) || 0) / 1000000).toFixed(1).replace(/\.0$/, '');
+        var shortTitle = match.title.split('—')[0].trim();
+        pill.innerHTML = '<span class="pill-dot"></span> ' + window.PropertyCatalog.escapeHtml(shortTitle) + ' (' + mil + ' ลบ.)';
+        pill.setAttribute('data-villa-title', match.title + (match.builtin_style ? ' • สไตล์ ' + match.builtin_style : ''));
+        pill.setAttribute(
+          'data-villa-desc',
+          'แปลง ' + match.plot_code + ' • ' + match.usable_area_sqm + ' ตร.ม. • ' + match.bedrooms + ' ห้องนอน ' + match.bathrooms + ' ห้องน้ำ • ' + match.subtitle
+        );
+        pill.setAttribute('data-villa-price', (Number(match.price_thb) / 1000000).toFixed(2).replace(/\.00$/, '') + ' ล้านบาท');
+        pill.setAttribute('data-villa-builtin', '✦ ฟรีบิ้วอิน ' + builtinMil + ' ล้าน');
+        pill.setAttribute('data-villa-id', String(match.id));
+      }
+    });
+
+    var activePill = stage.querySelector('.hero-villa-pill.active') || pills[0];
+    if (activePill) {
+      updateHeroShowcaseFromPill(activePill, properties);
+    }
+  }
+
+  function updateHeroShowcaseFromPill(pill, properties) {
+    if (!pill) return;
+    var heroImg = document.getElementById('heroCinematicImg');
+    var badgeEl = document.getElementById('heroCapsuleBadge');
+    var titleEl = document.getElementById('heroCapsuleTitle');
+    var descEl = document.getElementById('heroCapsuleDesc');
+    var priceEl = document.getElementById('heroCapsulePrice');
+    var builtinEl = document.getElementById('heroCapsuleBuiltin');
+
+    var newSrc = pill.getAttribute('data-villa-img');
+    var newTitle = pill.getAttribute('data-villa-title');
+    var newDesc = pill.getAttribute('data-villa-desc');
+    var newPrice = pill.getAttribute('data-villa-price');
+    var newBuiltin = pill.getAttribute('data-villa-builtin');
+    var villaId = Number(pill.getAttribute('data-villa-id'));
+    var plotCode = (pill.getAttribute('data-plot') || '').toUpperCase();
+
+    var propList = Array.isArray(properties) && properties.length > 0 ? properties : state.allProperties;
+    currentActiveHeroProperty = null;
+    for (var i = 0; i < propList.length; i++) {
+      var p = propList[i];
+      if ((villaId && Number(p.id) === villaId) || (plotCode && String(p.plot_code).toUpperCase() === plotCode)) {
+        currentActiveHeroProperty = p;
+        break;
+      }
+    }
+
+    if (heroImg && newSrc) {
+      heroImg.style.opacity = '0.4';
+      setTimeout(function () {
+        heroImg.src = newSrc;
+        heroImg.alt = 'HAVEN LUXE ESTATE ' + (newTitle || 'บ้านเดี่ยวหรู');
+        heroImg.style.opacity = '1';
+      }, 100);
+    }
+
+    if (badgeEl) badgeEl.textContent = '✦ SIGNATURE VILLA';
+    if (titleEl && newTitle) titleEl.textContent = newTitle;
+    if (descEl && newDesc) descEl.textContent = newDesc;
+    if (priceEl && newPrice) priceEl.textContent = newPrice;
+    if (builtinEl && newBuiltin) builtinEl.textContent = newBuiltin;
+  }
+
+  function initHeroVillaSwitcher() {
+    var stage = document.getElementById('heroGrandStage');
+    if (!stage) return;
+
+    var pills = stage.querySelectorAll('.hero-villa-pill');
+    pills.forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        pills.forEach(function (p) {
+          p.classList.remove('active');
+          p.setAttribute('aria-selected', 'false');
+        });
+        pill.classList.add('active');
+        pill.setAttribute('aria-selected', 'true');
+        updateHeroShowcaseFromPill(pill, state.allProperties);
+      });
+    });
+
+    var viewSpecsBtn = document.getElementById('heroViewSpecsBtn');
+    if (viewSpecsBtn) {
+      viewSpecsBtn.addEventListener('click', function () {
+        var target = currentActiveHeroProperty;
+        if (!target && state.allProperties.length > 0) {
+          target = state.allProperties[0];
+        }
+        if (target && window.PropertyCatalog && typeof window.PropertyCatalog.openDetailModal === 'function') {
+          window.PropertyCatalog.openDetailModal(target, buildCatalogCallbacks());
+        } else {
+          var catalogSec = document.getElementById('catalogSection');
+          if (catalogSec) catalogSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+
+    var calcUnitBtn = document.getElementById('heroCalcUnitBtn');
+    if (calcUnitBtn) {
+      calcUnitBtn.addEventListener('click', function () {
+        var target = currentActiveHeroProperty;
+        if (!target && state.allProperties.length > 0) {
+          target = state.allProperties[0];
+        }
+        if (target && window.MortgageCalculator && typeof window.MortgageCalculator.selectPropertyForCalc === 'function') {
+          window.MortgageCalculator.selectPropertyForCalc(target);
+        } else {
+          var calcSec = document.getElementById('calculatorSection');
+          if (calcSec) calcSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+
+    var searchBtn = document.getElementById('headerSearchBtn');
+    var searchInput = document.getElementById('filterSearchInput');
+    if (searchBtn && searchInput) {
+      searchBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = document.getElementById('catalogSection');
+        if (target && typeof target.scrollIntoView === 'function') {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setTimeout(function () {
+            searchInput.focus();
+          }, 380);
+        }
+      });
+    }
+  }
+
+  function initGalleryLightbox() {
+    var modal = document.getElementById('galleryLightboxModal');
+    var modalImg = document.getElementById('galleryLightboxImg');
+    var closeBtn = document.getElementById('closeGalleryLightboxBtn');
+    var grid = document.getElementById('luxuryGalleryGrid');
+
+    if (!modal || !modalImg || !grid) return;
+
+    function openLightbox(src, alt) {
+      modalImg.src = src;
+      modalImg.alt = alt || 'ภาพขยายผลงานบิ้วอินหรู';
+      modal.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      modal.setAttribute('hidden', '');
+      modalImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    grid.addEventListener('click', function (e) {
+      var card = e.target.closest('.gallery-card');
+      if (!card) return;
+      var img = card.querySelector('img');
+      if (img && img.src) {
+        openLightbox(img.src, img.alt);
+      }
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        closeLightbox();
+      });
+    }
+
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal || e.target.classList.contains('modal-backdrop') || e.target.closest('.modal-dialog') === null) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.hasAttribute('hidden')) {
+        closeLightbox();
+      }
+    });
+  }
+
   async function refreshCatalog() {
     var fullRes = await window.ApiClient.getProperties({});
     state.allProperties = fullRes.items || [];
@@ -228,6 +428,7 @@
     updateModeBanner();
     updateDynamicSeo(state.allProperties);
 
+    syncHeroVillaData(state.allProperties);
     window.MortgageCalculator.populateUnitSelector(state.allProperties);
     window.LeadManager.populateBookingPropertyDropdown(state.allProperties);
     await applyFiltersAndRender();
@@ -235,8 +436,10 @@
 
   async function initApp() {
     bindNavigationAndAdminHook();
+    initHeroVillaSwitcher();
     window.PropertyCatalog.initCompareSlider();
     window.PropertyCatalog.bindModalEvents();
+    initGalleryLightbox();
     bindFilterControls();
     window.LeadManager.initBookingForm();
 
@@ -251,6 +454,7 @@
     state.filteredProperties = state.allProperties.slice();
     updateDynamicSeo(state.allProperties);
 
+    syncHeroVillaData(state.allProperties);
     window.PropertyCatalog.renderCatalog(state.filteredProperties, buildCatalogCallbacks());
     window.MortgageCalculator.init(state.allProperties, {
       onBookWithCalcContext: function (prop, monthlyText) {
